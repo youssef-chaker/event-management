@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homePageFragment" android:enabled="true"  android:title="@string/home" android:icon="@drawable/ic_baseline_home_24"/>
+    <item android:id="@+id/eventsListFragment" android:enabled="true" android:title="@string/events" android:icon="@drawable/ic_baseline_event_24"/>
+    <item android:id="@+id/mapFragment" android:enabled="true" android:title="@string/map" android:icon="@drawable/ic_baseline_map_24"/>
+    <item android:id="@+id/loginFragment" android:enabled="true" android:title="@string/login" android:icon="@drawable/ic_baseline_login_24"/>
+    <item android:id="@+id/logoutItem" android:enabled="true" android:visible="false" android:title="@string/logout" android:icon="@drawable/ic_baseline_login_24"/>
+</menu>
