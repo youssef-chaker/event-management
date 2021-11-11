@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
 @Repository
 public class EventRepoImpl implements EventRepo{
@@ -27,5 +28,12 @@ public class EventRepoImpl implements EventRepo{
         Point point = (Point) geometry;
         Event event = new Event(eventDto.getTitle(),eventDto.getDescription(),point);
         entityManager.persist(event);
+    }
+
+    @Override
+    @Transactional
+    public List<Event> getEvents() {
+        var query = entityManager.createQuery("select e from Event e ");
+        return query.getResultList();
     }
 }
