@@ -23,10 +23,7 @@ public class EventRepoImpl implements EventRepo{
 
     @Override
     @Transactional
-    public void insertEvent(EventDto eventDto) throws ParseException {
-        Geometry geometry = new WKTReader().read(eventDto.getPoint());
-        Point point = (Point) geometry;
-        Event event = new Event(eventDto.getTitle(),eventDto.getDescription(),point);
+    public void insertEvent(Event event) throws ParseException {
         entityManager.persist(event);
     }
 

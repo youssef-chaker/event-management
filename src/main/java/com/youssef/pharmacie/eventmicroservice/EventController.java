@@ -1,8 +1,13 @@
 package com.youssef.pharmacie.eventmicroservice;
 
+import com.vividsolutions.jts.geom.Geometry;
+import com.vividsolutions.jts.geom.Point;
 import com.vividsolutions.jts.io.ParseException;
+import com.vividsolutions.jts.io.WKTReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.function.EntityResponse;
 
@@ -20,9 +25,15 @@ public class EventController {
     }
 
     @PostMapping
-    public ResponseEntity insertEvent(@RequestBody EventDto eventDto){
+    public ResponseEntity insertEvent(@RequestBody EventDto eventDto, @AuthenticationPrincipal Jwt jwt){
         try {
-            eventRepo.insertEvent(eventDto);
+            Geometry geometry = new WKTReader().read(eventDto.getPoint());
+            Point point = (Point) geometry;
+            Event event = new Event(eventDto.getTitle(),eventDto.getDescription(),point);
+            User user = new User();
+            user.setId(jwt.getClaims().get("sub").toString());
+            event.setOwner(user);
+            eventRepo.insertEvent(event);
             return ResponseEntity.ok().build();
         }catch (ParseException e){
             return ResponseEntity.badRequest().build();
