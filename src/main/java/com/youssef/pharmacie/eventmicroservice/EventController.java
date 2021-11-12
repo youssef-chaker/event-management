@@ -18,10 +18,12 @@ import java.util.List;
 public class EventController {
 
     private EventRepo eventRepo;
+    private UsersProxy usersProxy;
 
     @Autowired
-    public EventController(EventRepo eventRepo) {
+    public EventController(EventRepo eventRepo, UsersProxy usersProxy) {
         this.eventRepo = eventRepo;
+        this.usersProxy = usersProxy;
     }
 
     @PostMapping
@@ -30,8 +32,7 @@ public class EventController {
             Geometry geometry = new WKTReader().read(eventDto.getPoint());
             Point point = (Point) geometry;
             Event event = new Event(eventDto.getTitle(),eventDto.getDescription(),point);
-            User user = new User();
-            user.setId(jwt.getClaims().get("sub").toString());
+            User user = usersProxy.getUserById(jwt.getClaims().get("sub").toString());
             event.setOwner(user);
             eventRepo.insertEvent(event);
             return ResponseEntity.ok().build();

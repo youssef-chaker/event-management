@@ -24,7 +24,7 @@ public class EventRepoImpl implements EventRepo{
     @Override
     @Transactional
     public void insertEvent(Event event) throws ParseException {
-        entityManager.persist(event);
+        entityManager.merge(event);
     }
 
     @Override
