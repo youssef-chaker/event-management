@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -26,6 +27,12 @@ public class Event {
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Transient
     private LongLat longLat;
+    @ManyToOne(optional = false,cascade = {CascadeType.MERGE,CascadeType.PERSIST,CascadeType.DETACH,CascadeType.REFRESH})
+    @JoinColumn(name = "owner_id")
+    private User owner;
+    @ManyToMany
+    @JoinTable(name = "user_event",joinColumns = @JoinColumn(name = "event_id"),inverseJoinColumns = @JoinColumn(name = "user_id "))
+    private List<User> attendees;
 
     public LongLat getLongLat() {
         return new LongLat(String.valueOf(point.getX()),String.valueOf(point.getY()));
