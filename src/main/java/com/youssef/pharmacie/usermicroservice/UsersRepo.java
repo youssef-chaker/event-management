@@ -2,5 +2,13 @@ package com.youssef.pharmacie.usermicroservice;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UsersRepo extends JpaRepository<User,Long> {
+import java.util.List;
+
+//public interface UsersRepo extends JpaRepository<User,String> {
+//}
+
+
+public interface UsersRepo {
+    List<User> getAllUsers();
+    User getUserById(String id);
 }
