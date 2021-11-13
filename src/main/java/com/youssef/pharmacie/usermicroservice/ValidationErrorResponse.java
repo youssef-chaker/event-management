@@ -1,12 +1,6 @@
 package com.youssef.pharmacie.usermicroservice;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.validator.internal.engine.ConstraintViolationImpl;
-
 import javax.validation.ConstraintViolation;
-import java.util.HashMap;
 import java.util.Set;
 
 public class ValidationErrorResponse extends ErrorResponse{
