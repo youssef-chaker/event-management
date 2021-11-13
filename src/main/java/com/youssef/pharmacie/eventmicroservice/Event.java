@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -19,7 +20,7 @@ import java.util.List;
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private String title;
     private String description;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
@@ -35,6 +36,11 @@ public class Event {
     private List<User> attendees;
     public LongLat getLongLat() {
         return new LongLat(String.valueOf(point.getX()),String.valueOf(point.getY()));
+    }
+
+    public void addAttendee(User user){
+        if(attendees==null)attendees = new ArrayList<>();
+        attendees.add(user);
     }
 
     public Event(String title, String description, Point point) {

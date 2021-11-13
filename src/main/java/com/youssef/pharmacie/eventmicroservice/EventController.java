@@ -46,4 +46,10 @@ public class EventController {
         var events = eventRepo.getEvents();
         return ResponseEntity.ok(events);
     }
+
+    @RequestMapping("/subscribe/{id}")
+    public void subscribe(@PathVariable long id,@AuthenticationPrincipal Jwt jwt){
+        User user = usersProxy.getUserById(jwt.getClaims().get("sub").toString());
+        eventRepo.subscribe(user,id);
+    }
 }
