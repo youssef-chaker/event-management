@@ -38,7 +38,10 @@ public class User {
     private String email;
     @Column(name = "username")
     private String username;
-
+    @Column(name = "first_name")
+    private String firstName;
+    @Column(name = "last_name")
+    private String lastName;
 //    @PrePersist
 //    public void encryptPasswordWithBcrypt(){
 //        password = new BCryptPasswordEncoder(10).encode(password);

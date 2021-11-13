@@ -11,4 +11,6 @@ import java.util.List;
 public interface UsersRepo {
     List<User> getAllUsers();
     User getUserById(String id);
+    void createUser(User user);
+    Token getAdminToken();
 }

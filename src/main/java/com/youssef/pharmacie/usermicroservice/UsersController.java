@@ -1,10 +1,8 @@
 package com.youssef.pharmacie.usermicroservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +24,11 @@ public class UsersController {
     @GetMapping("/{id}")
     public User getUser(@PathVariable String id){
         return userRepo.getUserById(id);
+    }
+
+    @PostMapping
+    public ResponseEntity createUser(@RequestBody User user){
+        userRepo.createUser(user);
+        return ResponseEntity.ok().build();
     }
 }

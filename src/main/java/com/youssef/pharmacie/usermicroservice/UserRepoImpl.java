@@ -10,10 +10,12 @@ import java.util.List;
 public class UserRepoImpl implements UsersRepo{
 
     private EntityManager entityManager;
+    private KeycloackProxy keycloackProxy;
 
     @Autowired
-    public UserRepoImpl(EntityManager entityManager) {
+    public UserRepoImpl(EntityManager entityManager, KeycloackProxy keycloackProxy) {
         this.entityManager = entityManager;
+        this.keycloackProxy = keycloackProxy;
     }
 
     @Override
@@ -26,5 +28,16 @@ public class UserRepoImpl implements UsersRepo{
     public User getUserById(String id) {
         var user = entityManager.find(User.class,id);
         return user;
+    }
+
+    @Override
+    public void createUser(User user) {
+        var token = getAdminToken();
+        keycloackProxy.createUser(user,"Bearer "+token.getAccess_token());
+    }
+
+    @Override
+    public Token getAdminToken() {
+        return keycloackProxy.getAdminToken(KeyCloackRequestParams.getParams());
     }
 }
