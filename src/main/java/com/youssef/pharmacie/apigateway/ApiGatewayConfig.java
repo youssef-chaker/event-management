@@ -9,6 +9,9 @@ import org.springframework.context.annotation.Configuration;
 public class ApiGatewayConfig {
     @Bean
     public RouteLocator gatewayRouter(RouteLocatorBuilder builder){
-        return builder.routes().route(predicateSpec -> predicateSpec.path("/api/users/**").uri("lb://user-microservice")).build();
+        return builder.routes()
+                .route(predicateSpec -> predicateSpec.path("/api/users/**").uri("lb://user-microservice"))
+                .route(predicateSpec -> predicateSpec.path("/api/events/**").uri("lb://event-microservice"))
+                .build();
     }
 }
