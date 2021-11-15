@@ -18,7 +18,7 @@
         android:theme="@style/Theme.Blabla">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="${MAPS_API_KEY}" />
+            android:value="AIzaSyAa1LCFgyuqr2dbPeJ-mhVXif_Q6s0dMFk" />
         <activity android:name=".MainActivity" android:theme="@style/Theme.Blabla.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
