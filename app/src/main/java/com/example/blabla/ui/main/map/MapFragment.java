@@ -71,7 +71,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback , Locati
             if(events != null && events.size() >= 1) {
                 Log.i(TAG, "onMapReady: events observer : inside loop");
                 for (Event event : events) {
-                    clusterManager.addItem(new ClusterMarker(new LatLng(event.getLocation().getCoordinates().get(1),event.getLocation().getCoordinates().get(0)),event.getTitle(),event.getDescription()));
+//                    clusterManager.addItem(new ClusterMarker(new LatLng(event.getLocation().getCoordinates().get(1),event.getLocation().getCoordinates().get(0)),event.getTitle(),event.getDescription()));
+                    clusterManager.addItem(new ClusterMarker(new LatLng(event.getLongLat().getLatitude(),event.getLongLat().getLatitude()),event.getTitle(),event.getDescription()));
                     clusterManager.cluster();
                 }
             }

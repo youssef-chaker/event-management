@@ -20,19 +20,19 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface BlaBlaApi {
-    @GET("users/me")
+    @GET("/api/users/me")
     Call<User> getUserInfo();
 
-    @GET("/users/me/avatar")
+    @GET("/api/users/me/avatar")
     Call<ResponseBody> getAvatar(@Header("Authorization") String token);
 
-    @POST("users/login")
+    @POST("/api/users/login")
     Call<Token> login(@Body LoginDto loginDto);
 
-    @POST("users")
+    @POST("/api/users")
     Call<Token> signup(@Body SignupDto signupDto);
 
-    @PATCH("/users/me")
+    @PATCH("/api/users/me")
     Call<User> updateLocation(@Header("Authorization") String token,@Body LocationDto locationDto);
 
     @PATCH("users/me")
@@ -41,15 +41,15 @@ public interface BlaBlaApi {
     @GET("/events/nearme")
     Call<List<Event>> getEventsNearMe(@Header("Authorization") String token, @Query("longtitude") double longtitude,@Query("latitude") double latitude);
 
-    @GET("/events")
+    @GET("/api/events")
     Call<List<Event>> getEvents();
 
-    @POST("/events")
-    Call<Event> postEvent(@Header("Authorization") String token,@Body Event event);
+    @POST("/api/events")
+    Call<Event> postEvent(@Body Event event);
 
-    @GET("/events/{id}")
+    @GET("/api/events/{id}")
     Call<Event> getEventById(@Path("id") String id);
 
-    @POST("/events/subscribe/{id}")
+    @POST("/api/events/subscribe/{id}")
     Call<Void> subscribeToEvent(@Header("Authorization") String token,@Path("id")String id);
 }

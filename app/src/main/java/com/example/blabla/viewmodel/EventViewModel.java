@@ -53,7 +53,7 @@ public class EventViewModel extends ViewModel {
                     description.postValue(response.body().getDescription());
                     address.postValue(response.body().getAddress());
                 } else {
-                    Log.i(TAG, "onResponse: not successfull");
+                    Log.i(TAG, "onResponse: not successful");
                 }
             }
 

@@ -3,6 +3,8 @@ package com.example.blabla.app;
 import android.content.Context;
 
 import com.example.blabla.api.BlaBlaApi;
+import com.example.blabla.api.KeycloackApi;
+import com.example.blabla.repo.KeyCloackRepo;
 import com.example.blabla.repo.Repository;
 import com.example.blabla.room.database.Db;
 
@@ -31,23 +33,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainModule {
     @ViewModelScoped
     @Provides
-    public static Repository provideRepo(@ApplicationContext Context context, ExecutorService service) {
-
-        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
-        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-//        OkHttpClient okHttpClient = new OkHttpClient.Builder().dispatcher(new Dispatcher(Executors.newCachedThreadPool()))
-//                .addInterceptor(chain -> {
-//                    Request request = chain.request();
-//                    Request newRequest = request.newBuilder().header("Authorization","Bearer ").build();
-//                    return chain.proceed(newRequest);
-//                }).build();
-//                .addInterceptor(loggingInterceptor).build();
-//
-        OkHttpClient okHttpClient = new OkHttpClient.Builder().dispatcher(new Dispatcher(service)).addInterceptor(loggingInterceptor).build();
-
+    public static Repository provideRepo(@ApplicationContext Context context, ExecutorService service,OkHttpClient okHttpClient) {
 
         Retrofit retrofit2 = new Retrofit.Builder()
-                .baseUrl("http:192.168.1.52:3000/")
+                .baseUrl("http:192.168.1.61:8765/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();
@@ -61,8 +50,38 @@ public class MainModule {
 
     @ViewModelScoped
     @Provides
+    public static KeyCloackRepo proviceKeycloackRepo(ExecutorService service,OkHttpClient okHttpClient){
+
+        Retrofit retrofitKeycloack =  new Retrofit.Builder()
+                .baseUrl("http:192.168.1.61:8180/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
+                .build();
+        KeycloackApi api = retrofitKeycloack.create(KeycloackApi.class);
+        return new KeyCloackRepo(api,service);
+    }
+
+    @ViewModelScoped
+    @Provides
     public static ExecutorService provideExecutorService() {
         return Executors.newCachedThreadPool();
+    }
+
+    @ViewModelScoped
+    @Provides
+    public static OkHttpClient provideOkHttpClient(ExecutorService service){
+        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+//        OkHttpClient okHttpClient = new OkHttpClient.Builder().dispatcher(new Dispatcher(Executors.newCachedThreadPool()))
+//                .addInterceptor(chain -> {
+//                    Request request = chain.request();
+//                    Request newRequest = request.newBuilder().header("Authorization","Bearer ").build();
+//                    return chain.proceed(newRequest);
+//                }).build();
+//                .addInterceptor(loggingInterceptor).build();
+//
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().dispatcher(new Dispatcher(service)).addInterceptor(loggingInterceptor).build();
+        return okHttpClient;
     }
 
 }

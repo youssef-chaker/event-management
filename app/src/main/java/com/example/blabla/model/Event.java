@@ -8,13 +8,14 @@ import lombok.Data;
 
 @Data
 public class Event {
-    @SerializedName("_id")
+//    @SerializedName("_id")
     private String id ;
     private String title;
     private String description;
     private User owner;
     private String address;
     private Location location;
+    private LongLat longLat;
 
     public Event(String title, String description, String address, Location location) {
         this.title = title;

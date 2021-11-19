@@ -115,10 +115,10 @@ public class Repository {
         executor.execute(() -> userDao.clearAllUsers());
     }
 
-    public void postEvent(String token,Event event,Callback<Event> callback) {
+    public void postEvent(Event event,Callback<Event> callback) {
         Log.i(TAG, "postEvent: ");
         executor.execute(() -> {
-            Call<Event> call = remoteDataSource.postEvent(token,event);
+            Call<Event> call = remoteDataSource.postEvent(event);
             call.enqueue(callback);
         });
     }

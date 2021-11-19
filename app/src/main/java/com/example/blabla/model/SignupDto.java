@@ -10,7 +10,12 @@ public class SignupDto {
         this.email = email;
         this.password = password;
     }
+
     private String username;
     private String email;
     private String password;
+    private String firstName;
+    private String lastName;
+
 }
+

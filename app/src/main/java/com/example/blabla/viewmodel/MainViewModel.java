@@ -211,7 +211,7 @@ public class MainViewModel extends ViewModel {
     }
 
     public void postEvent(Event event,Callback<Event> callback) {
-        repo.postEvent(token.getValue().getToken(), event, callback);
+        repo.postEvent(event, callback);
     }
 
 
