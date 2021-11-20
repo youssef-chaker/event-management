@@ -17,7 +17,7 @@ public interface UserDao {
     @Insert
     void insertUser(User user);
 
-    @Query("delete from users where token=:token")
+    @Query("delete from users where access_token=:token")
     void deleteUser(String token);
 
     @Query("delete from users")
@@ -26,8 +26,8 @@ public interface UserDao {
     @Update
     void updateUser(User user);
 
-    @Query("update users set avatar=:bm where token=:token")
-    void addAvatar(String token , Bitmap bm);
+//    @Query("update users set avatar=:bm where token=:token")
+//    void addAvatar(String token , Bitmap bm);
 
     @Delete
     void deleteUser(User user);

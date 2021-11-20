@@ -14,7 +14,7 @@ public class Token {
     private String access_token;
     private String refresh_token;
     private String scope;
-    private String expires_in;
-    private String refresh_expires_in;
+    private long expires_in;
+    private long refresh_expires_in;
 
 }

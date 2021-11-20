@@ -1,6 +1,6 @@
 package com.example.blabla.room.entity;
 
-import android.graphics.Bitmap;
+import      android.graphics.Bitmap;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
@@ -10,54 +10,80 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity(tableName = "users")
+@NoArgsConstructor
 public class User {
-    private String token;
-    private String username;
     @PrimaryKey
     @NonNull
-    private String email;
-    private Bitmap avatar;
+    private String username;
+    private String access_token;
+    private String refresh_token;
+    private String scope;
+    private long expires_in;
+    private long refresh_expires_in;
+//    private Bitmap avatar;
 
-    public User(String token, String username, @NotNull String email) {
-        this.token = token;
+
+    public User(@NonNull String username, String access_token, String refresh_token, String scope, long expires_in, long refresh_expires_in) {
         this.username = username;
-        this.email = email;
+        this.access_token = access_token;
+        this.refresh_token = refresh_token;
+        this.scope = scope;
+        this.expires_in = expires_in;
+        this.refresh_expires_in = refresh_expires_in;
     }
 
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
+    @NonNull
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setUsername(@NonNull String username) {
         this.username = username;
     }
 
-    public String getEmail() {
-        return email;
+    public String getAccess_token() {
+        return access_token;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setAccess_token(String access_token) {
+        this.access_token = access_token;
     }
 
-    public Bitmap getAvatar() {
-        return avatar;
+    public String getRefresh_token() {
+        return refresh_token;
     }
 
-    public void setAvatar(Bitmap avatar) {
-        this.avatar = avatar;
+    public void setRefresh_token(String refresh_token) {
+        this.refresh_token = refresh_token;
+    }
+
+    public String getScope() {
+        return scope;
+    }
+
+    public void setScope(String scope) {
+        this.scope = scope;
+    }
+
+    public long getExpires_in() {
+        return expires_in;
+    }
+
+    public void setExpires_in(long expires_in) {
+        this.expires_in = expires_in;
+    }
+
+    public long getRefresh_expires_in() {
+        return refresh_expires_in;
+    }
+
+    public void setRefresh_expires_in(long refresh_expires_in) {
+        this.refresh_expires_in = refresh_expires_in;
     }
 }

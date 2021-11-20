@@ -62,7 +62,7 @@ public class MainViewModel extends ViewModel {
         if(user != null) {
 //            token = new MutableLiveData<>(new Token(user.getToken(),user.getUsername(),user.getEmail()));
             token = new MutableLiveData<>(new Token());
-            if(user.getAvatar() != null) avatar.setValue(user.getAvatar());
+//            if(user.getAvatar() != null) avatar.setValue(user.getAvatar());
         } else {
             token = new MutableLiveData<>(new Token());
         }
@@ -76,7 +76,7 @@ public class MainViewModel extends ViewModel {
                 if(response.isSuccessful()){
                     token.postValue(response.body());
                     message.postValue(new Message(true,"successfully logged in"));
-                    repo.insertUserLocal(new User(response.body().getAccess_token(),email,email));
+                    repo.insertUserLocal(new User(email,response.body().getAccess_token(),response.body().getRefresh_token(),response.body().getScope(),response.body().getExpires_in(),response.body().getRefresh_expires_in()) );
                 }else {
                     message.postValue(new Message(false,response.message()));
                 }
@@ -97,7 +97,7 @@ public class MainViewModel extends ViewModel {
                 if(response.isSuccessful()){
                     token.postValue(response.body());
                     message.postValue(new Message(true,"successfully logged in"));
-                    repo.insertUserLocal(new User(response.body().getAccess_token(),email,email) );
+                    repo.insertUserLocal(new User(email,response.body().getAccess_token(),response.body().getRefresh_token(),response.body().getScope(),response.body().getExpires_in(),response.body().getRefresh_expires_in()) );
                 }else {
                     message.postValue(new Message(false,response.message()));
                 }

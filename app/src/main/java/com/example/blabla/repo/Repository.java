@@ -58,12 +58,12 @@ public class Repository {
             userDao.insertUser(user);
         });
     }
-
-    public void addAvatarLocal(String token, Bitmap avatar) {
-        executor.execute(() -> {
-            userDao.addAvatar(token,avatar);
-        });
-    }
+//
+//    public void addAvatarLocal(String token, Bitmap avatar) {
+//        executor.execute(() -> {
+//            userDao.addAvatar(token,avatar);
+//        });
+//    }
 
     public User getUserLocal() throws ExecutionException, InterruptedException {
         CompletableFuture<User> c = CompletableFuture.supplyAsync(() -> {
