@@ -60,7 +60,8 @@ public class MainViewModel extends ViewModel {
             e.printStackTrace();
         }
         if(user != null) {
-            token = new MutableLiveData<>(new Token(user.getToken(),user.getUsername(),user.getEmail()));
+//            token = new MutableLiveData<>(new Token(user.getToken(),user.getUsername(),user.getEmail()));
+            token = new MutableLiveData<>(new Token());
             if(user.getAvatar() != null) avatar.setValue(user.getAvatar());
         } else {
             token = new MutableLiveData<>(new Token());
@@ -73,9 +74,9 @@ public class MainViewModel extends ViewModel {
             @Override
             public void onResponse(Call<Token> call, Response<Token> response) {
                 if(response.isSuccessful()){
-                    token.postValue(new Token(response.body().getToken(),response.body().getUsername()));
+                    token.postValue(response.body());
                     message.postValue(new Message(true,"successfully logged in"));
-                    repo.insertUserLocal(new User(response.body().getToken(),response.body().getUsername(),response.body().getEmail()) );
+                    repo.insertUserLocal(new User(response.body().getAccess_token(),email,email));
                 }else {
                     message.postValue(new Message(false,response.message()));
                 }
@@ -94,9 +95,9 @@ public class MainViewModel extends ViewModel {
             @Override
             public void onResponse(Call<Token> call, Response<Token> response) {
                 if(response.isSuccessful()){
-                    token.postValue(new Token(response.body().getToken(),response.body().getUsername()));
+                    token.postValue(response.body());
                     message.postValue(new Message(true,"successfully logged in"));
-                    repo.insertUserLocal(new User(response.body().getToken(),response.body().getUsername(),response.body().getEmail()) );
+                    repo.insertUserLocal(new User(response.body().getAccess_token(),email,email) );
                 }else {
                     message.postValue(new Message(false,response.message()));
                 }
@@ -111,7 +112,7 @@ public class MainViewModel extends ViewModel {
 
     public void getAvatar()  {
         Log.i(TAG, "getAvatar: inside get avatar");
-        repo.getAvatar(token.getValue().getToken(), new Callback<ResponseBody>() {
+        repo.getAvatar(token.getValue().getAccess_token(), new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if(response.isSuccessful()) {
@@ -120,7 +121,7 @@ public class MainViewModel extends ViewModel {
                         Bitmap bm = BitmapFactory.decodeStream(response.body().byteStream());
 //                                .decodeByteArray(response.body().bytes(),0,response.body().bytes().length);
                         avatar.postValue(bm);
-                        repo.addAvatarLocal(token.getValue().getToken(),bm);
+//                        repo.addAvatarLocal(token.getValue().getToken(),bm);
                     }catch (Exception e){
                         Log.i(TAG, "onResponse: ERROR");
                         Log.e(TAG, "onResponse: ",e );
@@ -136,8 +137,8 @@ public class MainViewModel extends ViewModel {
 
     public void getEventsNearMe(double longtitude,double latitude) {
         Log.i(TAG, "getEventsNearMe: ");
-        Log.i(TAG, "getEventsNearMe: "+token.getValue().getToken());
-        repo.getEventsNearMe(token.getValue().getToken(),longtitude,latitude,new Callback<List<Event>>() {
+        Log.i(TAG, "getEventsNearMe: "+token.getValue().getAccess_token());
+        repo.getEventsNearMe(token.getValue().getAccess_token(),longtitude,latitude,new Callback<List<Event>>() {
             @Override
             public void onResponse(Call<List<Event>> call, Response<List<Event>> response) {
                 if(response.isSuccessful()) {
@@ -178,7 +179,7 @@ public class MainViewModel extends ViewModel {
 
     public void subscribeToEvent(String eventId,Callback<Void> callback) {
         Log.i(TAG, "subscribeToEvent: ");
-        repo.subscribeToEvent(token.getValue().getToken(), eventId,callback);
+        repo.subscribeToEvent(token.getValue().getAccess_token(), eventId,callback);
     }
 
 //    public void updateLocationThenGetEvents(double longtitude,double latitude) {
@@ -207,7 +208,7 @@ public class MainViewModel extends ViewModel {
 
     public void updateUserLocation(double longtitude,double latitude) {
         Log.i(TAG, "updateUserLocation: ");
-        repo.updateUserLocation(token.getValue().getToken(),new LocationDto("Point",new double[]{longtitude,latitude}));
+        repo.updateUserLocation(token.getValue().getAccess_token(),new LocationDto("Point",new double[]{longtitude,latitude}));
     }
 
     public void postEvent(Event event,Callback<Event> callback) {

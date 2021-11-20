@@ -71,12 +71,12 @@ public class SignUpFragment extends Fragment {
         });
 
 
-        mViewModel.token.observe(getViewLifecycleOwner(), token -> {
-            if (token.getToken().length() > 2 && mViewModel.avatar.getValue() == null) {
-                mViewModel.getAvatar();
-                Navigation.findNavController(view).navigate(R.id.action_signUpFragment_to_homePageFragment);
-            }
-        });
+//        mViewModel.token.observe(getViewLifecycleOwner(), token -> {
+//            if (token.getToken().length() > 2 && mViewModel.avatar.getValue() == null) {
+//                mViewModel.getAvatar();
+//                Navigation.findNavController(view).navigate(R.id.action_signUpFragment_to_homePageFragment);
+//            }
+//        });
        return view;
     }
 

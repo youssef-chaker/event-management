@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         mViewModel.token.observe(this,token -> {
             Log.i(TAG, "token observer in mainactivity");
-            if(token.getToken()!=null && !token.getToken().equals("")) {
+            if(token.getAccess_token()!=null && !token.getAccess_token().equals("")) {
                 bottomNavigationView.getMenu().findItem(R.id.loginFragment).setVisible(false);
                 MenuItem logoutItem = bottomNavigationView.getMenu().findItem(R.id.logoutItem);
                 logoutItem.setVisible(true);

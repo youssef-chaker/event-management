@@ -64,12 +64,12 @@ public class LoginFragment extends Fragment {
 
 
         mViewModel.token.observe(getViewLifecycleOwner(),token -> {
-            ((TextView)view.findViewById(R.id.loggedIn)).setText(token.getToken());
+            ((TextView)view.findViewById(R.id.loggedIn)).setText(token.getAccess_token());
             Log.i(TAG, "onActivityCreated:  token changed");
-            if(token.getToken().length() > 2 && mViewModel.avatar.getValue() == null) {
-                mViewModel.getAvatar();
-                Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_homePageFragment);
-            }
+//            if(token.getAccess_token().length() > 2 && mViewModel.avatar.getValue() == null) {
+//                mViewModel.getAvatar();
+//                Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_homePageFragment);
+//            }
         });
         return view;
     }
