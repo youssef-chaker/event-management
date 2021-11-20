@@ -15,4 +15,6 @@ public interface KeycloackProxy {
     Token getAdminToken(@RequestBody Map<String,?> keyCloackRequestParams);
     @PostMapping (value = "/auth/admin/realms/pharmacierealm/users")
     void createUser(User user, @RequestHeader("Authorization") String bearerToken);
+    @PostMapping(value = "/auth/realms/pharmacierealm/protocol/openid-connect/token",consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+    Token getUserTokenByUsernameAndPassword(@RequestBody Map<String,?> params);
 }

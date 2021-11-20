@@ -1,5 +1,7 @@
 package com.youssef.pharmacie.usermicroservice;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.vividsolutions.jts.io.WKTReader;
 import lombok.Data;
 import org.geolatte.geom.Point;
@@ -10,6 +12,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -42,8 +45,31 @@ public class User {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
+    @Column(name = "enabled")
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private boolean enabled = true;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @Transient
+    private String password;
+    @Transient
+    private List<Credentials> credentials;
+
+    public void setPassword(String password) {
+        System.out.println("setting credentials");
+        this.password = password;
+        credentials = new ArrayList<>();
+        var cred = new Credentials();
+        cred.setValue(password);
+        credentials.add(cred);
+    }
 //    @PrePersist
 //    public void encryptPasswordWithBcrypt(){
 //        password = new BCryptPasswordEncoder(10).encode(password);
 //    }
+}
+@Data
+class Credentials {
+    private String type="password";
+    private String value ;
+    private boolean temporary = false;
 }

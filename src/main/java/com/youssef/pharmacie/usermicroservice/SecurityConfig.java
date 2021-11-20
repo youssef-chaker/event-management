@@ -8,6 +8,13 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.time.LocalDate;
+import java.util.Base64;
+
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true,securedEnabled = true)
@@ -20,6 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http
                 .cors().disable()
+                .csrf().disable()
                 .authorizeRequests()
                 .anyRequest().permitAll()
                 .and()
@@ -27,4 +35,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .jwt()
                 .jwtAuthenticationConverter(jwtAuthenticationConverter);
     }
+
 }

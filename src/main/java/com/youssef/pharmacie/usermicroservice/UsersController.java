@@ -27,8 +27,17 @@ public class UsersController {
     }
 
     @PostMapping
-    public ResponseEntity createUser(@RequestBody User user){
+    public ResponseEntity<Token> createUser(@RequestBody User user){
+//        return ResponseEntity.ok(user);
         userRepo.createUser(user);
-        return ResponseEntity.ok().build();
+        Token token = userRepo.usernameAndPasswordLogin(user.getUsername(),user.getPassword());
+        return ResponseEntity.ok(token);
+//        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<Token> usernameAndPasswordLogin(@RequestBody LoginDto loginDto){
+        var token = userRepo.usernameAndPasswordLogin(loginDto.getUsername(),loginDto.getPassword());
+        return ResponseEntity.ok(token);
     }
 }

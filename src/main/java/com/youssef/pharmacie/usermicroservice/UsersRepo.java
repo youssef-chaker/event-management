@@ -13,4 +13,5 @@ public interface UsersRepo {
     User getUserById(String id);
     void createUser(User user);
     Token getAdminToken();
+    Token usernameAndPasswordLogin(String username,String password);
 }
