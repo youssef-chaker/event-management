@@ -63,9 +63,9 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
-                        <name>thiccmoustache/${project.artifactId}:${project.version}
+                        <name>youssef/${project.artifactId}:${project.version}</name>
+                        <pullPolicy>IF_NOT_PRESENT</pullPolicy>
                     </image>
-                    <pullPolicy>IF_NOT_PRESENT</pullPolicy>
                 </configuration>
             </plugin>
         </plugins>
