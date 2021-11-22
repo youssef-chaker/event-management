@@ -10,6 +10,9 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +28,6 @@ public class Event {
     private String description;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Point point;
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Transient
     private LongLat longLat;
     @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.PERSIST,CascadeType.DETACH,CascadeType.REFRESH})
@@ -48,12 +50,4 @@ public class Event {
         this.description = description;
         this.point = point;
     }
-}
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-class LongLat {
-    private String longitude;
-    private String latitude;
 }

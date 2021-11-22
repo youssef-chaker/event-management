@@ -16,9 +16,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(new KeyCloackRoleConverter());
         http
                 .cors().disable()
+                .csrf().disable()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.POST,"/api/events/**")
-                .authenticated()
+//                .antMatchers(HttpMethod.POST,"/api/events/**").authenticated()
                 .anyRequest().permitAll()
                 .and()
                 .oauth2ResourceServer()

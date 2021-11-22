@@ -34,6 +34,11 @@ public class EventRepoImpl implements EventRepo{
         return query.getResultList();
     }
 
+//    @Override
+//    public List<Event> getEventsByDistance(int order) {
+//      return null;
+//    }
+
     @Override
     @Transactional
     public Event getEvent(long id) {

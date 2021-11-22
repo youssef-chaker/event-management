@@ -6,10 +6,9 @@ import lombok.Data;
 public class EventDto {
     private String title;
     private String description;
-    private double longitude;
-    private double latitude;
+    private LongLat longLat;
 
     public String getPoint(){
-        return "POINT ("+this.longitude+" "+this.latitude+")";
+        return "POINT ("+this.longLat.getLongitude()+" "+this.longLat.getLatitude()+")";
     }
 }

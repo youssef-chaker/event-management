@@ -6,11 +6,13 @@ import com.vividsolutions.jts.io.ParseException;
 import com.vividsolutions.jts.io.WKTReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.function.EntityResponse;
 
+import javax.persistence.OrderBy;
 import java.util.List;
 
 @RestController
@@ -32,7 +34,10 @@ public class EventController {
             Geometry geometry = new WKTReader().read(eventDto.getPoint());
             Point point = (Point) geometry;
             Event event = new Event(eventDto.getTitle(),eventDto.getDescription(),point);
-            User user = usersProxy.getUserById(jwt.getClaims().get("sub").toString());
+            User user = usersProxy.getUserById(
+                    jwt.getClaims().get("sub").toString()
+            );
+//            User user = usersProxy.getUserById("c1e163af-da42-4db5-88f2-c991871d2b88");
             event.setOwner(user);
             eventRepo.insertEvent(event);
             return ResponseEntity.ok().build();
@@ -41,13 +46,32 @@ public class EventController {
         }
     }
 
+//    @GetMapping
+//    public ResponseEntity<List<Event>> getAllEvents(@RequestBody LongLat longLat, @RequestParam String orderBy,@RequestParam int order,@RequestParam int limit,@RequestParam int offset){
+//        List<Event> events ;
+//        if(orderBy != null){
+//            events = eventRepo.getEvents();
+//        }else{
+//            events = eventRepo.getEvents();
+//        }
+//        return ResponseEntity.ok(events);
+//    }
+
     @GetMapping
     public ResponseEntity<List<Event>> getAllEvents(){
-        var events = eventRepo.getEvents();
+        List<Event> events =eventRepo.getEvents();
         return ResponseEntity.ok(events);
     }
 
+
+    @GetMapping("{id}")
+    public ResponseEntity<Event> getEventById(@PathVariable long id){
+        var event = eventRepo.getEvent(id);
+        return ResponseEntity.ok(event);
+    }
+
     @RequestMapping("/subscribe/{id}")
+    @PreAuthorize("isAuthenticated()")
     public void subscribe(@PathVariable long id,@AuthenticationPrincipal Jwt jwt){
         User user = usersProxy.getUserById(jwt.getClaims().get("sub").toString());
         eventRepo.subscribe(user,id);
