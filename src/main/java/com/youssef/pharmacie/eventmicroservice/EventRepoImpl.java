@@ -1,9 +1,5 @@
 package com.youssef.pharmacie.eventmicroservice;
 
-import com.vividsolutions.jts.geom.Geometry;
-import com.vividsolutions.jts.geom.Point;
-import com.vividsolutions.jts.io.ParseException;
-import com.vividsolutions.jts.io.WKTReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,7 +10,7 @@ import java.util.List;
 @Repository
 public class EventRepoImpl implements EventRepo{
 
-    private EntityManager entityManager;
+    private final EntityManager entityManager;
 
     @Autowired
     public EventRepoImpl(EntityManager entityManager) {
@@ -23,21 +19,24 @@ public class EventRepoImpl implements EventRepo{
 
     @Override
     @Transactional
-    public void insertEvent(Event event) throws ParseException {
+    public void insertEvent(Event event) {
         entityManager.merge(event);
     }
 
     @Override
     @Transactional
     public List<Event> getEvents() {
-        var query = entityManager.createQuery("select e from Event e ");
+        var query = entityManager.createQuery("select e from Event e ",Event.class);
         return query.getResultList();
     }
 
-//    @Override
-//    public List<Event> getEventsByDistance(int order) {
-//      return null;
-//    }
+    @Override
+    public List<Event> getEventsByDistance (double longitude,double latitude,int order) {
+        String ascORdesc = order==-1 ? "desc": "asc";
+        var query = entityManager.
+                createQuery("select e from Event e order by ST_Distance(ST_MakePoint("+longitude+","+latitude+"), point) "+ascORdesc,Event.class);
+        return query.getResultList();
+    }
 
     @Override
     @Transactional

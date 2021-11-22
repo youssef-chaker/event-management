@@ -46,6 +46,7 @@ public class EventController {
         }
     }
 
+
 //    @GetMapping
 //    public ResponseEntity<List<Event>> getAllEvents(@RequestBody LongLat longLat, @RequestParam String orderBy,@RequestParam int order,@RequestParam int limit,@RequestParam int offset){
 //        List<Event> events ;
@@ -58,8 +59,15 @@ public class EventController {
 //    }
 
     @GetMapping
-    public ResponseEntity<List<Event>> getAllEvents(){
-        List<Event> events =eventRepo.getEvents();
+    public ResponseEntity<List<Event>> getAllEvents(@RequestParam(required = false) Double longitude,@RequestParam(required = false) Double latitude){
+        System.out.println(longitude+ " "+latitude);
+        List<Event> events;
+        if(longitude!=null && latitude!=null){
+            System.out.println("inside if ");
+            events = eventRepo.getEventsByDistance(longitude,latitude,1);
+        } else {
+            events =eventRepo.getEvents();
+        }
         return ResponseEntity.ok(events);
     }
 
