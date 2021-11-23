@@ -123,11 +123,7 @@ public class AddEventFragment extends Fragment implements OnMapReadyCallback {
         });
 
         addButton.setOnClickListener(v -> {
-            Event event = new Event(title.getText().toString(),description.getText().toString(), location.getText().toString(),new Location("Point", List.of(longtitude,latitude)));
-            LongLat longLat = new LongLat();
-            longLat.setLatitude(latitude);
-            longLat.setLongitude(longtitude);
-            event.setLongLat(longLat);
+            Event event = new Event(title.getText().toString(),description.getText().toString(), location.getText().toString(),new LongLat(longtitude,latitude));
             mViewModel.postEvent(event, new Callback<Event>() {
                 @Override
                 public void onResponse(Call<Event> call, Response<Event> response) {

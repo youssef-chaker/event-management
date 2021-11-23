@@ -94,7 +94,7 @@ public class EventsListFragment extends Fragment implements LocationListener {
         layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
 
-
+        //todo fix this shit , a lot of problems with it
         eventsList.observe(getViewLifecycleOwner(),events -> {
             if(counter++ == 0 ) return;
             Log.i(TAG, "onActivityCreated: events list observer");
@@ -109,8 +109,9 @@ public class EventsListFragment extends Fragment implements LocationListener {
 //                }
                 if(adapter == null) {
                     Log.i(TAG, "onCreateView: adapter null");
-                    adapter = new EventsAdapter(eventsList.getValue());
                 }
+                //todo this line was inside the if statement : figure out why it only works inside the if when location is not enabled
+                adapter = new EventsAdapter(eventsList.getValue());
                 recyclerView.setAdapter(adapter);
             }
         });

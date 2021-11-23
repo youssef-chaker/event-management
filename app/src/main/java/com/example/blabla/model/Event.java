@@ -17,11 +17,11 @@ public class Event {
     private Location location;
     private LongLat longLat;
 
-    public Event(String title, String description, String address, Location location) {
+    public Event(String title, String description, String address, LongLat longlat) {
         this.title = title;
         this.description = description;
         this.address = address;
-        this.location = location;
+        this.longLat= longlat;
     }
 }
 

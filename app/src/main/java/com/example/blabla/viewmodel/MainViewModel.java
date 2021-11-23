@@ -61,7 +61,7 @@ public class MainViewModel extends ViewModel {
         }
         if(user != null) {
 //            token = new MutableLiveData<>(new Token(user.getToken(),user.getUsername(),user.getEmail()));
-            token = new MutableLiveData<>(new Token());
+            token = new MutableLiveData<>(new Token(user.getAccess_token(),user.getRefresh_token(),user.getScope(), user.getExpires_in(), user.getRefresh_expires_in()));
 //            if(user.getAvatar() != null) avatar.setValue(user.getAvatar());
         } else {
             token = new MutableLiveData<>(new Token());
@@ -135,13 +135,14 @@ public class MainViewModel extends ViewModel {
         });
     }
 
-    public void getEventsNearMe(double longtitude,double latitude) {
+    public void getEventsNearMe(double longitude,double latitude) {
         Log.i(TAG, "getEventsNearMe: ");
         Log.i(TAG, "getEventsNearMe: "+token.getValue().getAccess_token());
-        repo.getEventsNearMe(token.getValue().getAccess_token(),longtitude,latitude,new Callback<List<Event>>() {
+        repo.getEventsNearMe(token.getValue().getAccess_token(),longitude,latitude,new Callback<List<Event>>() {
             @Override
             public void onResponse(Call<List<Event>> call, Response<List<Event>> response) {
                 if(response.isSuccessful()) {
+                    Log.i(TAG, "onResponse: sucessfull");
                     message.postValue(new Message(true,"fetched events"));
                     eventsLiveData.postValue(response.body());
                 }else {
@@ -179,7 +180,7 @@ public class MainViewModel extends ViewModel {
 
     public void subscribeToEvent(String eventId,Callback<Void> callback) {
         Log.i(TAG, "subscribeToEvent: ");
-        repo.subscribeToEvent(token.getValue().getAccess_token(), eventId,callback);
+        repo.subscribeToEvent("Bearer "+token.getValue().getAccess_token(), eventId,callback);
     }
 
 //    public void updateLocationThenGetEvents(double longtitude,double latitude) {
@@ -212,7 +213,7 @@ public class MainViewModel extends ViewModel {
     }
 
     public void postEvent(Event event,Callback<Event> callback) {
-        repo.postEvent(event, callback);
+        repo.postEvent("Bearer "+token.getValue().getAccess_token(),event, callback);
     }
 
 

@@ -38,14 +38,14 @@ public interface BlaBlaApi {
     @PATCH("users/me")
     Call<User> patchUser(@Body User user);
 
-    @GET("/events/nearme")
-    Call<List<Event>> getEventsNearMe(@Header("Authorization") String token, @Query("longtitude") double longtitude,@Query("latitude") double latitude);
+    @GET("api/events")
+    Call<List<Event>> getEventsNearMe(@Header("Authorization") String token, @Query("longitude") double longitude,@Query("latitude") double latitude);
 
     @GET("/api/events")
     Call<List<Event>> getEvents();
 
     @POST("/api/events")
-    Call<Event> postEvent(@Body Event event);
+    Call<Event> postEvent(@Header("Authorization") String token,@Body Event event);
 
     @GET("/api/events/{id}")
     Call<Event> getEventById(@Path("id") String id);
