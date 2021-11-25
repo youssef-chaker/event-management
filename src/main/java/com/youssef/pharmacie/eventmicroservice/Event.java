@@ -41,14 +41,13 @@ import java.util.List;
                 @ColumnResult(name = "distance",type = double.class),
         })
 )
-
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String title;
     private String description;
-    @OneToMany(mappedBy = "tag")
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "event")
     private List<Tag> tags;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Point point;
@@ -64,12 +63,19 @@ public class Event {
     private double distance;
     public LongLat getLongLat() {
         if(point==null)return null;
-        return new LongLat(String.valueOf(point.getX()),String.valueOf(point.getY()));
+        return new LongLat(point.getX(),point.getY());
     }
 
     public void addAttendee(User user){
         if(attendees==null)attendees = new ArrayList<>();
         attendees.add(user);
+    }
+
+    public void addTags(List<Tag> tagList){
+        if(this.tags == null) this.tags = new ArrayList<>();
+//        var tagList =List.of(tags);
+        tagList.forEach(tag -> tag.setEvent(this));
+        this.tags.addAll(tagList);
     }
 
     public Event(String title, String description, Point point) {

@@ -4,6 +4,7 @@ import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.Point;
 import com.vividsolutions.jts.io.ParseException;
 import com.vividsolutions.jts.io.WKTReader;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,13 +15,16 @@ import org.springframework.web.servlet.function.EntityResponse;
 
 import javax.persistence.OrderBy;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/api/events")
+@Log4j2
 public class EventController {
 
-    private EventRepo eventRepo;
-    private UsersProxy usersProxy;
+    private final EventRepo eventRepo;
+    private final UsersProxy usersProxy;
 
     @Autowired
     public EventController(EventRepo eventRepo, UsersProxy usersProxy) {
@@ -31,6 +35,7 @@ public class EventController {
     @PostMapping
     public ResponseEntity insertEvent(@RequestBody EventDto eventDto, @AuthenticationPrincipal Jwt jwt){
         try {
+            System.out.println(eventDto);
             Geometry geometry = new WKTReader().read(eventDto.getPoint());
             Point point = (Point) geometry;
             Event event = new Event(eventDto.getTitle(),eventDto.getDescription(),point);
@@ -39,9 +44,14 @@ public class EventController {
             );
 //            User user = usersProxy.getUserById("c1e163af-da42-4db5-88f2-c991871d2b88");
             event.setOwner(user);
+            event.addTags(
+                    Stream.of(eventDto.getTags()).map(Tag::new).collect(Collectors.toList())
+//                    eventDto.getTags()
+            );
             eventRepo.insertEvent(event);
             return ResponseEntity.ok().build();
         }catch (ParseException e){
+            log.error(e);
             return ResponseEntity.badRequest().build();
         }
     }

@@ -1,17 +1,26 @@
 package com.youssef.pharmacie.eventmicroservice;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity(name = "tag")
 @Data
+@NoArgsConstructor
 public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private long id;
     private String value;
     @ManyToOne
-    @JoinColumn(name = "tag_id",nullable = false)
-    private Tag tag;
+    @JoinColumn(name = "event_id",nullable = false)
+    @JsonIgnore
+    private Event event;
+
+    public Tag(String value) {
+        this.value = value;
+    }
 }
