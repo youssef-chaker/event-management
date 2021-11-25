@@ -1,0 +1,285 @@
+2021-11-24 22:16:21,286 [   2544]   WARN - llij.ide.plugins.PluginManager - id redefinition ([row,col,system-id]: [2,3,"product classpath"]) 
+2021-11-24 22:17:54,103 [  95361]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 10762ms, details saved to /home/youyou/.cache/JetBrains/IntelliJIdea2021.2/log/threadDumps-freeze-20211124-221748-IU-212.4746.92-10sec 
+2021-11-24 22:17:56,919 [  98177]   WARN - l.NotificationGroupManagerImpl - Notification group CodeWithMe is already registered (group=com.intellij.notification.NotificationGroup@63effef9). Plugin descriptor: PluginDescriptor(name=Code With Me, id=com.jetbrains.codeWithMe, descriptorPath=plugin.xml, path=/home/samir/Downloads/idea-IU-212.4746.92/plugins/cwm-plugin, version=212.4746.92, package=null) 
+2021-11-24 22:18:30,460 [ 131718]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 8360ms, details saved to /home/youyou/.cache/JetBrains/IntelliJIdea2021.2/log/threadDumps-freeze-20211124-221827-IU-212.4746.92-8sec 
+2021-11-24 22:18:37,783 [ 139041]   WARN - ctionSystem.impl.ActionUpdater - Slow (150 ms) 'update' on action Load Script Configurations (The Gradle Kotlin DSL script configuration has been changed. Load the changes to get code insight without importing the external Gradle project.) of class org.jetbrains.kotlin.idea.scripting.gradle.LoadConfigurationAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:18:42,794 [ 144052]   WARN - ctionSystem.impl.ActionUpdater - 2112 ms to expand group child OpenFile 
+2021-11-24 22:18:42,859 [ 144117]   WARN - ctionSystem.impl.ActionUpdater - Slow (150 ms) 'getChildren' on action null (null) of class com.intellij.openapi.wm.impl.ToolWindowHeader$1. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:18:48,914 [ 150172]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 8342ms, details saved to /home/youyou/.cache/JetBrains/IntelliJIdea2021.2/log/threadDumps-freeze-20211124-221845-IU-212.4746.92-8sec 
+2021-11-24 22:18:49,921 [ 151179]   WARN - ctionSystem.impl.ActionUpdater - 1104 ms to expand group child DatabaseView.AddActionGroupPopup 
+2021-11-24 22:18:54,689 [ 155947]   WARN - ctionSystem.impl.ActionUpdater - 4318 ms to expand group child CWMTelephonyGroup 
+2021-11-24 22:18:54,690 [ 155948]   WARN - ctionSystem.impl.ActionUpdater - 4318 ms to expand group child CodeWithMeNavbarGroup 
+2021-11-24 22:18:54,817 [ 156075]   WARN - ctionSystem.impl.ActionUpdater - 4444 ms to expand group child TabList 
+2021-11-24 22:18:56,969 [ 158227]   WARN - ctionSystem.impl.ActionUpdater - 2150 ms to expand group child CWMTelephonyGroup 
+2021-11-24 22:18:56,970 [ 158228]   WARN - ctionSystem.impl.ActionUpdater - 2150 ms to expand group child CodeWithMeNavbarGroup 
+2021-11-24 22:18:56,979 [ 158237]   WARN - ctionSystem.impl.ActionUpdater - 1230 ms to expand group child TabList 
+2021-11-24 22:19:07,993 [ 169251]   WARN - ctionSystem.impl.ActionUpdater - 10323 ms to expand group child CWMTelephonyGroup 
+2021-11-24 22:19:07,993 [ 169251]   WARN - ctionSystem.impl.ActionUpdater - 10324 ms to expand group child CodeWithMeNavbarGroup 
+2021-11-24 22:19:11,465 [ 172723]   WARN - a.repo.GitUntrackedFilesHolder - Ignoring unversioned file under another root: /home/youyou/IdeaProjects/pharmacie/EventMicroservice; root: /home/youyou/IdeaProjects/pharmacie; mapped root: /home/youyou/IdeaProjects/pharmacie/EventMicroservice 
+2021-11-24 22:19:11,703 [ 172961]   WARN - a.repo.GitUntrackedFilesHolder - Ignoring ignored file under another root: /home/youyou/IdeaProjects/pharmacie/EventMicroservice/target; root: /home/youyou/IdeaProjects/pharmacie; mapped root: /home/youyou/IdeaProjects/pharmacie/EventMicroservice 
+2021-11-24 22:19:11,703 [ 172961]   WARN - a.repo.GitUntrackedFilesHolder - Ignoring ignored file under another root: /home/youyou/IdeaProjects/pharmacie/EventMicroservice/.idea; root: /home/youyou/IdeaProjects/pharmacie; mapped root: /home/youyou/IdeaProjects/pharmacie/EventMicroservice 
+2021-11-24 22:19:11,704 [ 172962]   WARN - a.repo.GitUntrackedFilesHolder - Ignoring ignored file under another root: /home/youyou/IdeaProjects/pharmacie/EventMicroservice/EventMicroservice.iml; root: /home/youyou/IdeaProjects/pharmacie; mapped root: /home/youyou/IdeaProjects/pharmacie/EventMicroservice 
+2021-11-24 22:19:11,704 [ 172962]   WARN - a.repo.GitUntrackedFilesHolder - Ignoring ignored file under another root: /home/youyou/IdeaProjects/pharmacie/EventMicroservice/HELP.md; root: /home/youyou/IdeaProjects/pharmacie; mapped root: /home/youyou/IdeaProjects/pharmacie/EventMicroservice 
+2021-11-24 22:19:16,610 [ 177868]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 18111ms, details saved to /home/youyou/.cache/JetBrains/IntelliJIdea2021.2/log/threadDumps-freeze-20211124-221903-IU-212.4746.92-18sec 
+2021-11-24 22:19:19,099 [ 180357]   WARN - ctionSystem.impl.ActionUpdater - 2394 ms to expand group child TabList 
+2021-11-24 22:19:19,099 [ 180357]   WARN - ctionSystem.impl.ActionUpdater - 2394 ms to expand group child TabList 
+2021-11-24 22:19:23,101 [ 184359]   WARN - ctionSystem.impl.ActionUpdater - 3660 ms to expand group child TabList 
+2021-11-24 22:19:23,108 [ 184366]   WARN - ctionSystem.impl.ActionUpdater - 3666 ms to expand group child TabList 
+2021-11-24 22:19:26,806 [ 188064]   WARN - ctionSystem.impl.ActionUpdater - 3065 ms to expand group child TabList 
+2021-11-24 22:19:26,811 [ 188069]   WARN - ctionSystem.impl.ActionUpdater - 3069 ms to expand group child TabList 
+2021-11-24 22:19:30,282 [ 191540]   WARN - ctionSystem.impl.ActionUpdater - Slow (616 ms) 'update' on action Select File in Project View (Selects a context file in the Project View) of class com.intellij.ide.projectView.impl.SelectFileAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:31,165 [ 192423]   WARN - ctionSystem.impl.ActionUpdater - Slow (240 ms) 'update' on action Show Code With Me popup () of class com.jetbrains.rdserver.actions.CWMHostShowPopupAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:31,526 [ 192784]   WARN - ctionSystem.impl.ActionUpdater - Slow (151 ms) 'update' on action Select Run/Debug Configuration (Select Run/Debug Configuration) of class com.intellij.execution.actions.RunConfigurationsComboBoxAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:31,932 [ 193190]   WARN - ctionSystem.impl.ActionUpdater - Slow (184 ms) 'update' on action Apply Changes and Restart Activity (Attempt to apply resource and code changes and restart activity.) of class com.android.tools.idea.run.ui.ApplyChangesAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:33,352 [ 194610]   WARN - ctionSystem.impl.ActionUpdater - 1703 ms to expand group child null 
+2021-11-24 22:19:34,159 [ 195417]   WARN - ctionSystem.impl.ActionUpdater - Slow (130 ms) 'update' on action Copy as Rich Text (Copy selection to clipboard as rich text (in RTF and HTML formats)) of class com.intellij.openapi.editor.richcopy.CopyAsRichTextAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:35,483 [ 196741]   WARN - ctionSystem.impl.ActionUpdater - 1035 ms to expand group child StringManipulation.Group.Main 
+2021-11-24 22:19:35,483 [ 196741]   WARN - ctionSystem.impl.ActionUpdater - 1036 ms to expand group child StringManipulation.EditorPopupMenu 
+2021-11-24 22:19:38,392 [ 199650]   WARN - ctionSystem.impl.ActionUpdater - 4713 ms to expand group child null 
+2021-11-24 22:19:40,594 [ 201852]   WARN - ctionSystem.impl.ActionUpdater - 5059 ms to expand group child RefactoringMenu 
+2021-11-24 22:19:40,953 [ 202211]   WARN - ctionSystem.impl.ActionUpdater - Slow (334 ms) 'update' on action Table alias... () of class com.intellij.sql.actions.SqlIntroduceTableAliasAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:41,294 [ 202552]   WARN - ctionSystem.impl.ActionUpdater - 5758 ms to expand group child RefactoringMenu 
+2021-11-24 22:19:41,331 [ 202589]   WARN - ctionSystem.impl.ActionUpdater - 5846 ms to expand group child EditorPopupMenu1.FindRefactor 
+2021-11-24 22:19:42,388 [ 203646]   WARN - ctionSystem.impl.ActionUpdater - 1053 ms to expand group child AnalyzeMenu 
+2021-11-24 22:19:42,389 [ 203647]   WARN - ctionSystem.impl.ActionUpdater - 1057 ms to expand group child EditorPopupMenuAnalyze 
+2021-11-24 22:19:42,389 [ 203647]   WARN - ctionSystem.impl.ActionUpdater - 6906 ms to expand group child EditorPopupMenu1 
+2021-11-24 22:19:43,602 [ 204860]   WARN - ctionSystem.impl.ActionUpdater - Slow (721 ms) 'update' on action SQL Scripts () of class com.intellij.database.actions.GenerateSqlActions$SqlActionsGroup. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:43,614 [ 204872]   WARN - ctionSystem.impl.ActionUpdater - 1224 ms to expand group child EditorPopupMenu2 
+2021-11-24 22:19:45,104 [ 206362]   WARN - ctionSystem.impl.ActionUpdater - 6710 ms to expand group child WeighingNewGroup 
+2021-11-24 22:19:45,407 [ 206665]   WARN - ctionSystem.impl.ActionUpdater - 7013 ms to expand group child WeighingNewGroup 
+2021-11-24 22:19:47,461 [ 208719]   WARN - ctionSystem.impl.ActionUpdater - 2053 ms to expand group child showEntityDdl 
+2021-11-24 22:19:47,615 [ 208873]   WARN - ctionSystem.impl.ActionUpdater - Slow (123 ms) 'update' on action Add C++ to Module (Add C/C++ code built with CMake or ndk-build to this module) of class com.android.tools.idea.gradle.actions.AddCppToModuleAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:47,814 [ 209072]   WARN - ctionSystem.impl.ActionUpdater - 3111 ms to expand group child GenerateGroup 
+2021-11-24 22:19:48,025 [ 209283]   WARN - ctionSystem.impl.ActionUpdater - Slow (248 ms) 'update' on action Add to Favorites () of class com.intellij.ide.favoritesTreeView.actions.AddToFavoritesActionGroup. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:48,814 [ 210072]   WARN - ctionSystem.impl.ActionUpdater - 4110 ms to expand group child Generate 
+2021-11-24 22:19:50,561 [ 211819]   WARN - ctionSystem.impl.ActionUpdater - Slow (943 ms) 'update' on action Evaluate Expression... (Evaluate arbitrary expression) of class com.intellij.xdebugger.impl.actions.EvaluateAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:50,750 [ 212008]   WARN - ctionSystem.impl.ActionUpdater - Slow (153 ms) 'update' on action Add to Watches () of class com.intellij.xdebugger.impl.actions.AddToWatchesAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:51,280 [ 212538]   WARN - ctionSystem.impl.ActionUpdater - Slow (324 ms) 'update' on action Toggle Field Watchpoint (Toggle field watchpoint for the field at caret) of class com.intellij.debugger.actions.ToggleFieldBreakpointAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:51,288 [ 212546]   WARN - ctionSystem.impl.ActionUpdater - 2474 ms to expand group child EditorPopupMenuDebug 
+2021-11-24 22:19:52,100 [ 213358]   WARN - ctionSystem.impl.ActionUpdater - 3579 ms to expand group child AddToTestNGSuite 
+2021-11-24 22:19:52,101 [ 213359]   WARN - ctionSystem.impl.ActionUpdater - 3963 ms to expand group child addToTempGroup 
+2021-11-24 22:19:52,565 [ 213823]   WARN - ctionSystem.impl.ActionUpdater - 4427 ms to expand group child RunContextGroup 
+2021-11-24 22:19:53,588 [ 214846]   WARN - ctionSystem.impl.ActionUpdater - 1019 ms to expand group child RevealGroup 
+2021-11-24 22:19:53,601 [ 214859]   WARN - ctionSystem.impl.ActionUpdater - 1032 ms to expand group child RevealGroup 
+2021-11-24 22:19:53,632 [ 214890]   WARN - ctionSystem.impl.ActionUpdater - 5505 ms to expand group child RunContextPopupGroup 
+2021-11-24 22:19:53,632 [ 214890]   WARN - ctionSystem.impl.ActionUpdater - 5534 ms to expand group child ProjectViewPopupMenuRunGroup 
+2021-11-24 22:19:54,377 [ 215635]   WARN - ctionSystem.impl.ActionUpdater - Slow (468 ms) 'getChildren' on action  () of class com.intellij.ide.projectView.actions.MarkSourceRootActionGroup. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:54,738 [ 215996]   WARN - ctionSystem.impl.ActionUpdater - 3448 ms to expand group child RunClass 
+2021-11-24 22:19:54,739 [ 215997]   WARN - ctionSystem.impl.ActionUpdater - 3449 ms to expand group child RunContextGroupInner 
+2021-11-24 22:19:54,964 [ 216222]   WARN - ctionSystem.impl.ActionUpdater - Slow (223 ms) 'update' on action Attach Session (Attaches a file to a session) of class com.intellij.database.run.actions.ChooseSessionAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-24 22:19:54,995 [ 216253]   WARN - ctionSystem.impl.ActionUpdater - 3705 ms to expand group child RunContextGroup 
+2021-11-24 22:19:54,997 [ 216255]   WARN - ctionSystem.impl.ActionUpdater - 3708 ms to expand group child RunContextPopupGroup 
+2021-11-24 22:19:54,998 [ 216256]   WARN - ctionSystem.impl.ActionUpdater - 3708 ms to expand group child EditorPopupMenu.Run 
+2021-11-24 22:19:55,179 [ 216437]   WARN - ctionSystem.impl.ActionUpdater - 11560 ms to expand group child EditorLangPopupMenu 
+2021-11-24 22:20:04,070 [ 225328]   WARN - ctionSystem.impl.ActionUpdater - 9473 ms to expand group child UML.Group 
+2021-11-24 22:20:04,126 [ 225384]   WARN - ctionSystem.impl.ActionUpdater - 8940 ms to expand group child UML.EditorGroup 
+2021-11-24 22:20:11,255 [ 232513]   WARN - ctionSystem.impl.ActionUpdater - 4303 ms to expand group child RefactoringMenu 
+2021-11-24 22:20:11,255 [ 232513]   WARN - ctionSystem.impl.ActionUpdater - 4303 ms to expand group child EditorPopupMenu1.FindRefactor 
+2021-11-24 22:20:11,256 [ 232514]   WARN - ctionSystem.impl.ActionUpdater - 4304 ms to expand group child EditorPopupMenu1 
+2021-11-24 22:20:11,258 [ 232516]   WARN - ctionSystem.impl.ActionUpdater - 4300 ms to expand group child com.github.chencn.yamlandprops 
+2021-11-24 22:20:12,737 [ 233995]   WARN - ctionSystem.impl.ActionUpdater - 1013 ms to expand group child TabList 
+2021-11-24 22:20:12,737 [ 233995]   WARN - ctionSystem.impl.ActionUpdater - 1013 ms to expand group child TabList 
+Theme loaded
+2021-11-24 22:23:40,891 [ 442149]   WARN - nSystem.impl.ActionToolbarImpl - Please do not use ActionPlaces.UNKNOWN or the empty place. Any string unique enough to deduce the toolbar location will do. 
+java.lang.Throwable: toolbar creation trace
+	at com.intellij.openapi.actionSystem.impl.ActionToolbarImpl.<init>(ActionToolbarImpl.java:112)
+	at com.intellij.openapi.actionSystem.impl.ActionManagerImpl.createActionToolbar(ActionManagerImpl.java:432)
+	at com.intellij.openapi.actionSystem.impl.ActionManagerImpl.createActionToolbar(ActionManagerImpl.java:426)
+	at com.android.tools.idea.common.error.IssuePanel.createToolbar(IssuePanel.java:244)
+	at com.android.tools.idea.common.error.IssuePanel.createTitlePanel(IssuePanel.java:255)
+	at com.android.tools.idea.common.error.IssuePanel.<init>(IssuePanel.java:124)
+	at com.android.tools.idea.common.surface.DesignSurface.<init>(DesignSurface.java:328)
+	at com.android.tools.idea.uibuilder.surface.NlDesignSurface.<init>(NlDesignSurface.java:398)
+	at com.android.tools.idea.uibuilder.surface.NlDesignSurface$Builder.build(NlDesignSurface.java:327)
+	at com.android.tools.idea.uibuilder.visual.VisualizationForm.<init>(VisualizationForm.java:151)
+	at com.android.tools.idea.uibuilder.visual.VisualizationManager.createPreviewForm(VisualizationManager.java:118)
+	at com.android.tools.idea.uibuilder.visual.VisualizationManager.initToolWindow(VisualizationManager.java:125)
+	at com.android.tools.idea.uibuilder.visual.VisualizationManager$2.run(VisualizationManager.java:268)
+	at com.intellij.util.ui.update.MergingUpdateQueue.execute(MergingUpdateQueue.java:333)
+	at com.intellij.util.ui.update.MergingUpdateQueue.execute(MergingUpdateQueue.java:323)
+	at com.intellij.util.ui.update.MergingUpdateQueue.lambda$flush$1(MergingUpdateQueue.java:273)
+	at com.intellij.util.ui.EdtInvocationManager.invokeAndWaitIfNeeded(EdtInvocationManager.java:148)
+	at com.intellij.util.ui.UIUtil.invokeAndWaitIfNeeded(UIUtil.java:2199)
+	at com.intellij.util.ui.update.MergingUpdateQueue.flush(MergingUpdateQueue.java:284)
+	at com.intellij.util.ui.update.MergingUpdateQueue.run(MergingUpdateQueue.java:242)
+	at com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:240)
+	at com.intellij.util.Alarm$Request.runSafely(Alarm.java:391)
+	at com.intellij.util.Alarm$Request.run(Alarm.java:377)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intellij.util.concurrency.SchedulingWrapper$MyScheduledFutureTask.run(SchedulingWrapper.java:220)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:214)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$200(TransactionGuardImpl.java:21)
+	at com.intellij.openapi.application.TransactionGuardImpl$2.run(TransactionGuardImpl.java:196)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:794)
+	at com.intellij.openapi.application.impl.ApplicationImpl.lambda$invokeLater$4(ApplicationImpl.java:350)
+	at com.intellij.openapi.application.impl.FlushQueue.doRun(FlushQueue.java:84)
+	at com.intellij.openapi.application.impl.FlushQueue.runNextEvent(FlushQueue.java:133)
+	at com.intellij.openapi.application.impl.FlushQueue.flushNow(FlushQueue.java:46)
+	at com.intellij.openapi.application.impl.FlushQueue$FlushNow.run(FlushQueue.java:189)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:776)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:746)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:886)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:755)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$7(IdeEventQueue.java:442)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:825)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$8(IdeEventQueue.java:441)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:794)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:487)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2021-11-24 22:23:47,362 [ 448620]   WARN - ctionSystem.impl.ActionUpdater - 3522 ms to expand group child TabList 
+2021-11-24 22:23:47,363 [ 448621]   WARN - ctionSystem.impl.ActionUpdater - 3523 ms to expand group child TabList 
+2021-11-24 22:23:51,856 [ 453114]   WARN - ad.SharedIndexDownloadExecutor - Shared indexes download was cancelled. Indexing has completed faster 
+2021-11-24 22:24:17,735 [ 478993]   WARN - redentialStore.CredentialStore - storage unlock timeout 
+2021-11-25 12:16:24,976 [50406234]   WARN - rd.LiteralExpressionsAnnotator -  
+java.lang.Throwable: Control-flow exceptions (like ProcessCanceledException) should never be logged: ignore for explicitly started processes or rethrow to handle on the outer process level
+	at com.intellij.openapi.diagnostic.Logger.ensureNotControlFlow(Logger.java:234)
+	at com.intellij.idea.IdeaLogger.warn(IdeaLogger.java:183)
+	at com.intellij.openapi.diagnostic.Logger.warn(Logger.java:176)
+	at com.haulmont.jpb.reference.hard.LiteralExpressionsAnnotator.annotate(LiteralExpressionsAnnotator.java:46)
+	at com.intellij.codeInsight.daemon.impl.DefaultHighlightVisitor.runAnnotators(DefaultHighlightVisitor.java:134)
+	at com.intellij.codeInsight.daemon.impl.DefaultHighlightVisitor.visit(DefaultHighlightVisitor.java:114)
+	at com.intellij.codeInsight.daemon.impl.GeneralHighlightingPass.runVisitors(GeneralHighlightingPass.java:335)
+	at com.intellij.codeInsight.daemon.impl.GeneralHighlightingPass.lambda$collectHighlights$5(GeneralHighlightingPass.java:268)
+	at com.intellij.codeInsight.daemon.impl.GeneralHighlightingPass.analyzeByVisitors(GeneralHighlightingPass.java:294)
+	at com.intellij.codeInsight.daemon.impl.GeneralHighlightingPass.lambda$analyzeByVisitors$6(GeneralHighlightingPass.java:297)
+	at com.intellij.codeInsight.daemon.impl.analysis.HighlightVisitorImpl.lambda$analyze$1(HighlightVisitorImpl.java:214)
+	at com.intellij.codeInsight.daemon.impl.analysis.RefCountHolder.analyze(RefCountHolder.java:369)
+	at com.intellij.codeInsight.daemon.impl.analysis.HighlightVisitorImpl.analyze(HighlightVisitorImpl.java:213)
+	at com.intellij.codeInsight.daemon.impl.GeneralHighlightingPass.analyzeByVisitors(GeneralHighlightingPass.java:297)
+	at com.intellij.codeInsight.daemon.impl.GeneralHighlightingPass.lambda$analyzeByVisitors$6(GeneralHighlightingPass.java:297)
+	at com.intellij.codeInsight.daemon.impl.DefaultHighlightVisitor.analyze(DefaultHighlightVisitor.java:94)
+	at com.intellij.codeInsight.daemon.impl.GeneralHighlightingPass.analyzeByVisitors(GeneralHighlightingPass.java:297)
+	at com.intellij.codeInsight.daemon.impl.GeneralHighlightingPass.collectHighlights(GeneralHighlightingPass.java:265)
+	at com.intellij.codeInsight.daemon.impl.GeneralHighlightingPass.collectInformationWithProgress(GeneralHighlightingPass.java:211)
+	at com.intellij.codeInsight.daemon.impl.ProgressableTextEditorHighlightingPass.doCollectInformation(ProgressableTextEditorHighlightingPass.java:84)
+	at com.intellij.codeHighlighting.TextEditorHighlightingPass.collectInformation(TextEditorHighlightingPass.java:56)
+	at com.intellij.codeInsight.daemon.impl.PassExecutorService$ScheduledPass.lambda$doRun$1(PassExecutorService.java:399)
+	at com.intellij.openapi.application.impl.ApplicationImpl.tryRunReadAction(ApplicationImpl.java:1078)
+	at com.intellij.codeInsight.daemon.impl.PassExecutorService$ScheduledPass.lambda$doRun$2(PassExecutorService.java:392)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:705)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:647)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:63)
+	at com.intellij.codeInsight.daemon.impl.PassExecutorService$ScheduledPass.doRun(PassExecutorService.java:391)
+	at com.intellij.codeInsight.daemon.impl.PassExecutorService$ScheduledPass.lambda$run$0(PassExecutorService.java:367)
+	at com.intellij.openapi.application.impl.ReadMostlyRWLock.executeByImpatientReader(ReadMostlyRWLock.java:174)
+	at com.intellij.openapi.application.impl.ApplicationImpl.executeByImpatientReader(ApplicationImpl.java:183)
+	at com.intellij.codeInsight.daemon.impl.PassExecutorService$ScheduledPass.run(PassExecutorService.java:365)
+	at com.intellij.concurrency.JobLauncherImpl$VoidForkJoinTask$1.exec(JobLauncherImpl.java:188)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: com.intellij.openapi.progress.ProcessCanceledException
+	at com.intellij.openapi.progress.util.AbstractProgressIndicatorBase.throwIfCanceled(AbstractProgressIndicatorBase.java:160)
+	at com.intellij.openapi.progress.util.AbstractProgressIndicatorBase.checkCanceled(AbstractProgressIndicatorBase.java:151)
+	at com.intellij.codeInsight.daemon.impl.DaemonProgressIndicator.checkCanceled(DaemonProgressIndicator.java:97)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.doCheckCanceled(CoreProgressManager.java:138)
+	at com.intellij.openapi.progress.ProgressManager.checkCanceled(ProgressManager.java:231)
+	at com.intellij.openapi.extensions.impl.ExtensionPointImpl.lambda$setCheckCanceledAction$18(ExtensionPointImpl.java:1102)
+	at com.intellij.openapi.extensions.impl.ExtensionPointImpl.getThreadSafeAdapterList(ExtensionPointImpl.java:330)
+	at com.intellij.openapi.extensions.impl.ExtensionPointImpl.createIterator(ExtensionPointImpl.java:348)
+	at com.intellij.openapi.extensions.impl.ExtensionPointImpl.iterator(ExtensionPointImpl.java:279)
+	at com.intellij.openapi.extensions.impl.ExtensionProcessingHelper.computeSafeIfAny(ExtensionProcessingHelper.java:50)
+	at com.intellij.openapi.extensions.ExtensionPointName.computeSafeIfAny(ExtensionPointName.java:54)
+	at com.intellij.openapi.fileTypes.impl.FileTypeManagerImpl.getFileTypeByFile(FileTypeManagerImpl.java:662)
+	at com.intellij.util.indexing.FileContentImpl.createByContent(FileContentImpl.java:103)
+	at com.intellij.psi.stubs.StubTreeLoaderImpl.lambda$build$1(StubTreeLoaderImpl.java:54)
+	at com.intellij.openapi.vfs.newvfs.impl.VirtualFileImpl.computeWithPreloadedContentHint(VirtualFileImpl.java:96)
+	at com.intellij.psi.stubs.StubTreeLoaderImpl.build(StubTreeLoaderImpl.java:53)
+	at com.intellij.psi.stubs.StubTreeLoaderImpl.readOrBuild(StubTreeLoaderImpl.java:44)
+	at com.intellij.psi.impl.compiled.ClsFileImpl.getStubTree(ClsFileImpl.java:483)
+	at com.intellij.psi.impl.compiled.ClsFileImpl.getStubbedSpine(ClsFileImpl.java:510)
+	at com.intellij.psi.stubs.StubProcessingHelperBase.getAllSpines(StubProcessingHelperBase.java:82)
+	at com.intellij.psi.stubs.StubProcessingHelperBase.processStubsInFile(StubProcessingHelperBase.java:65)
+	at com.intellij.psi.stubs.StubIndexImpl.lambda$processElements$2(StubIndexImpl.java:287)
+	at com.intellij.psi.stubs.StubIndexImpl.processElements(StubIndexImpl.java:333)
+	at com.intellij.psi.stubs.StubIndex.getElements(StubIndex.java:100)
+	at com.intellij.psi.stubs.StubIndex.getElements(StubIndex.java:88)
+	at com.intellij.psi.impl.java.stubs.index.JavaAnnotationIndex.get(JavaAnnotationIndex.java:30)
+	at com.intellij.psi.impl.search.AnnotatedElementsSearcher.lambda$getAnnotationCandidates$3(AnnotatedElementsSearcher.java:72)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runReadAction(ApplicationImpl.java:854)
+	at com.intellij.openapi.application.ReadAction.compute(ReadAction.java:61)
+	at com.intellij.psi.impl.search.AnnotatedElementsSearcher.getAnnotationCandidates(AnnotatedElementsSearcher.java:70)
+	at com.intellij.psi.impl.search.AnnotatedElementsSearcher.execute(AnnotatedElementsSearcher.java:35)
+	at com.intellij.psi.impl.search.AnnotatedElementsSearcher.execute(AnnotatedElementsSearcher.java:21)
+	at com.intellij.util.ExecutorsQuery.processResults(ExecutorsQuery.java:28)
+	at com.intellij.util.AbstractQuery.doProcessResults(AbstractQuery.java:91)
+	at com.intellij.util.AbstractQuery.delegateProcessResults(AbstractQuery.java:108)
+	at com.intellij.util.InstanceofQuery.processResults(InstanceofQuery.java:22)
+	at com.intellij.util.AbstractQuery.doProcessResults(AbstractQuery.java:91)
+	at com.intellij.util.AbstractQuery.forEach(AbstractQuery.java:83)
+	at com.intellij.codeInsight.MetaAnnotationUtil.getChildren(MetaAnnotationUtil.java:88)
+	at com.intellij.codeInsight.MetaAnnotationUtil.collectClassWithChildren(MetaAnnotationUtil.java:175)
+	at com.intellij.codeInsight.MetaAnnotationUtil.getAnnotationTypesWithChildren(MetaAnnotationUtil.java:125)
+	at com.intellij.codeInsight.MetaAnnotationUtil.lambda$getAnnotationTypesWithChildren$0(MetaAnnotationUtil.java:69)
+	at com.intellij.util.containers.ConcurrentFactoryMap$2.create(ConcurrentFactoryMap.java:174)
+	at com.intellij.util.containers.ConcurrentFactoryMap.get(ConcurrentFactoryMap.java:40)
+	at com.intellij.codeInsight.MetaAnnotationUtil.getAnnotationTypesWithChildren(MetaAnnotationUtil.java:74)
+	at com.intellij.spring.model.jam.utils.JamAnnotationTypeUtilImpl.getAnnotationTypes(JamAnnotationTypeUtilImpl.java:139)
+	at com.intellij.spring.model.jam.utils.JamAnnotationTypeUtilImpl.getAnnotationTypesWithChildrenIncludingTests(JamAnnotationTypeUtilImpl.java:133)
+	at com.intellij.spring.model.jam.SpringSemContributorUtil$2.getAnnotationTypes(SpringSemContributorUtil.java:301)
+	at com.intellij.spring.model.jam.SpringSemContributorUtil$2.fun(SpringSemContributorUtil.java:260)
+	at com.intellij.spring.model.jam.SpringSemContributorUtil$2.fun(SpringSemContributorUtil.java:255)
+	at com.intellij.spring.model.jam.SpringSemContributorUtil.lambda$createRepeatableFunction$3(SpringSemContributorUtil.java:172)
+	at com.intellij.semantic.SemRegistrar.lambda$registerRepeatableSemElementProvider$1(SemRegistrar.java:39)
+	at com.intellij.semantic.SemServiceImpl.createSemElements(SemServiceImpl.java:132)
+	at com.intellij.semantic.SemServiceImpl.createSemElements(SemServiceImpl.java:102)
+	at com.intellij.semantic.SemServiceImpl.getSemElements(SemServiceImpl.java:87)
+	at com.intellij.jam.JamService.getMetas(JamService.java:111)
+	at com.intellij.jam.JamSemContributor.lambda$registerSemProviders$2(JamSemContributor.java:53)
+	at com.intellij.semantic.SemRegistrar.lambda$registerSemElementProvider$0(SemRegistrar.java:27)
+	at com.intellij.semantic.SemServiceImpl.createSemElements(SemServiceImpl.java:132)
+	at com.intellij.semantic.SemServiceImpl.createSemElements(SemServiceImpl.java:102)
+	at com.intellij.semantic.SemServiceImpl.getSemElements(SemServiceImpl.java:87)
+	at com.intellij.jam.JamReferenceContributor.getReferences(JamReferenceContributor.kt:37)
+	at com.intellij.jam.JamReferenceContributor.access$getReferences(JamReferenceContributor.kt:17)
+	at com.intellij.jam.JamReferenceContributor$registerReferenceProviders$1.invoke(JamReferenceContributor.kt:23)
+	at com.intellij.jam.JamReferenceContributor$registerReferenceProviders$1.invoke(JamReferenceContributor.kt:17)
+	at com.intellij.psi.UastReferenceRegistrar$uastReferenceProviderByUsage$1.getReferencesByElement(UastReferenceRegistrar.kt:103)
+	at com.intellij.psi.UastReferenceProviderAdapter$getReferencesByElement$1.invoke(UastReferenceProviderAdapter.kt:13)
+	at com.intellij.psi.UastReferenceProviderAdapter$getReferencesByElement$1.invoke(UastReferenceProviderAdapter.kt:8)
+	at com.intellij.openapi.progress.impl.CancellationCheck.withCancellationCheck(CancellationCheck.kt:59)
+	at com.intellij.openapi.progress.impl.CancellationCheck$Companion.runWithCancellationCheck(CancellationCheck.kt:105)
+	at com.intellij.psi.UastReferenceProviderAdapter.getReferencesByElement(UastReferenceProviderAdapter.kt:13)
+	at com.intellij.psi.impl.source.resolve.reference.ReferenceProvidersRegistryImpl.getReferences(ReferenceProvidersRegistryImpl.java:199)
+	at com.intellij.psi.impl.source.resolve.reference.ReferenceProvidersRegistryImpl.mapNotEmptyReferencesFromProviders(ReferenceProvidersRegistryImpl.java:162)
+	at com.intellij.psi.impl.source.resolve.reference.ReferenceProvidersRegistryImpl.doGetReferencesFromProviders(ReferenceProvidersRegistryImpl.java:141)
+	at com.intellij.psi.impl.source.resolve.reference.ReferenceProvidersRegistry.lambda$getReferencesFromProviders$0(ReferenceProvidersRegistry.java:39)
+	at com.intellij.psi.util.CachedValuesManager$1.compute(CachedValuesManager.java:158)
+	at com.intellij.psi.impl.PsiCachedValueImpl.doCompute(PsiCachedValueImpl.java:39)
+	at com.intellij.util.CachedValueBase.lambda$getValueWithLock$3(CachedValueBase.java:227)
+	at com.intellij.util.CachedValueBase.computeData(CachedValueBase.java:42)
+	at com.intellij.util.CachedValueBase.lambda$getValueWithLock$4(CachedValueBase.java:227)
+	at com.intellij.openapi.util.RecursionManager$1.computePreventingRecursion(RecursionManager.java:111)
+	at com.intellij.openapi.util.RecursionGuard.doPreventingRecursion(RecursionGuard.java:43)
+	at com.intellij.openapi.util.RecursionManager.doPreventingRecursion(RecursionManager.java:68)
+	at com.intellij.util.CachedValueBase.getValueWithLock(CachedValueBase.java:228)
+	at com.intellij.psi.impl.PsiCachedValueImpl.getValue(PsiCachedValueImpl.java:28)
+	at com.intellij.util.CachedValuesManagerImpl.getCachedValue(CachedValuesManagerImpl.java:72)
+	at com.intellij.psi.util.CachedValuesManager.getCachedValue(CachedValuesManager.java:155)
+	at com.intellij.psi.util.CachedValuesManager.getCachedValue(CachedValuesManager.java:121)
+	at com.intellij.psi.impl.source.resolve.reference.ReferenceProvidersRegistry.getReferencesFromProviders(ReferenceProvidersRegistry.java:38)
+	at com.intellij.psi.PsiReferenceServiceImpl.doGetReferences(PsiReferenceServiceImpl.java:34)
+	at com.intellij.psi.PsiReferenceServiceImpl.getReferences(PsiReferenceServiceImpl.java:26)
+	at com.intellij.psi.PsiReferenceService.getContributedReferences(PsiReferenceService.java:34)
+	at com.intellij.psi.impl.source.tree.java.PsiLiteralExpressionImpl.getReferences(PsiLiteralExpressionImpl.java:193)
+	at com.haulmont.jpb.reference.hard.LiteralExpressionsAnnotator.annotate(LiteralExpressionsAnnotator.java:38)
+	... 34 more
+2021-11-25 12:16:55,655 [50436913]   WARN - ctionSystem.impl.ActionUpdater - 1338 ms to expand group child RunClass 
+2021-11-25 12:16:55,656 [50436914]   WARN - ctionSystem.impl.ActionUpdater - 1339 ms to expand group child RunContextGroupInner 
+2021-11-25 12:16:55,658 [50436916]   WARN - ctionSystem.impl.ActionUpdater - 1342 ms to expand group child RunContextGroup 
+2021-11-25 12:16:55,659 [50436917]   WARN - ctionSystem.impl.ActionUpdater - 1343 ms to expand group child RunContextPopupGroup 
+2021-11-25 12:16:55,659 [50436917]   WARN - ctionSystem.impl.ActionUpdater - 1343 ms to expand group child EditorPopupMenu.Run 
+2021-11-25 12:16:55,660 [50436918]   WARN - ctionSystem.impl.ActionUpdater - 1375 ms to expand group child EditorLangPopupMenu 
