@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.blabla.R;
 import com.example.blabla.model.Event;
+import com.example.blabla.model.LongLat;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.text.DecimalFormat;
@@ -86,34 +87,39 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
         holder.getTitle().setText(event.getTitle());
         holder.getDescription().setText(event.getDescription());
         holder.id = event.getId();
-        if(location!=null){
-            List<Double> coordinates = event.getLocation().getCoordinates();
-            Location start = new Location("start");
-            start.setLongitude(coordinates.get(0));
-            start.setLatitude(coordinates.get(1));
-            Location end = new Location("end");
-            end.setLongitude(location.longitude);
-            end.setLatitude(location.latitude);
-            float result = start.distanceTo(end);
-            Log.i(TAG, "onBindViewHolder: "+event.getAddress());
-//            36.880400, 10.221458
-            Log.i(TAG, "onBindViewHolder: "+coordinates.get(0));
-            Log.i(TAG, "onBindViewHolder: "+coordinates.get(1));
-            Log.i(TAG, "onBindViewHolder: "+location.longitude);
-            Log.i(TAG, "onBindViewHolder: "+location.latitude);
-            Log.i(TAG, "onBindViewHolder: result : "+result);
-            Log.i(TAG, "*************************");
-
-//            float[] results = new float[3];
-//            Location.distanceBetween(location.latitude,location.longitude,coordinates.get(0),coordinates.get(1),results);
-//            Log.i(TAG, "onBindViewHolder: "+results[0]);
-//            Log.i(TAG, "onBindViewHolder: "+results[1]);
-//            Log.i(TAG, "onBindViewHolder: "+results[2]);
-//            Log.i(TAG, "***********************************");
-//            holder.getDistance().setText(String.valueOf(results[0]/1000));
+        double distance = event.getDistance();
+        if(distance!=0) {
             DecimalFormat df = new DecimalFormat("#.##");
-            holder.getDistance().setText(df.format(result/1000)+" km");
+            holder.getDistance().setText(df.format((distance / 1000)) + " km");
         }
+//        if(this.location!=null){
+//            Log.i(TAG, "onBindViewHolder: locationnotnull");
+////            Location start = new Location("start");
+////            start.setLongitude(longlat.getLongitude());
+////            start.setLatitude(longlat.getLatitude());
+////            Location end = new Location("end");
+////            end.setLongitude(location.longitude);
+////            end.setLatitude(location.latitude);
+////            float result = start.distanceTo(end);
+////            Log.i(TAG, "onBindViewHolder: "+event.getAddress());
+//////            36.880400, 10.221458
+////            Log.i(TAG, "onBindViewHolder: "+coordinates.get(0));
+////            Log.i(TAG, "onBindViewHolder: "+coordinates.get(1));
+////            Log.i(TAG, "onBindViewHolder: "+location.longitude);
+////            Log.i(TAG, "onBindViewHolder: "+location.latitude);
+////            Log.i(TAG, "onBindViewHolder: result : "+result);
+////            Log.i(TAG, "*************************");
+//
+////            float[] results = new float[3];
+////            Location.distanceBetween(location.latitude,location.longitude,coordinates.get(0),coordinates.get(1),results);
+////            Log.i(TAG, "onBindViewHolder: "+results[0]);
+////            Log.i(TAG, "onBindViewHolder: "+results[1]);
+////            Log.i(TAG, "onBindViewHolder: "+results[2]);
+////            Log.i(TAG, "***********************************");
+////            holder.getDistance().setText(String.valueOf(results[0]/1000));
+////            DecimalFormat df = new DecimalFormat("#.##");
+//            holder.getDistance().setText((distance/1000)+" km");
+//        }
     }
 
     @Override

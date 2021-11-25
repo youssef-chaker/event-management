@@ -54,7 +54,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="128dp"
+                android:text="300"
                 app:layout_constraintBottom_toBottomOf="@+id/eventTitle"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/eventTitle"
                 app:layout_constraintTop_toTopOf="@id/eventTitle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
