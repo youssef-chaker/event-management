@@ -1,5 +1,6 @@
 package com.example.blabla.ui.main;
 
+import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.LocationListener;
@@ -21,6 +22,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -139,6 +141,12 @@ public class AddEventFragment extends Fragment implements OnMapReadyCallback {
 
         addButton.setOnClickListener(v -> {
             Event event = new Event(title.getText().toString(),description.getText().toString(), location.getText().toString(),new LongLat(longtitude,latitude));
+            String[] tags = new String[chipGroup.getChildCount()];
+            for(int i =0;i< chipGroup.getChildCount();i++){
+                tags[i] = ((Chip)chipGroup.getChildAt(i)).getText().toString();
+            }
+
+            event.setTags(tags);
             mViewModel.postEvent(event, new Callback<Event>() {
                 @Override
                 public void onResponse(Call<Event> call, Response<Event> response) {
@@ -201,6 +209,10 @@ public class AddEventFragment extends Fragment implements OnMapReadyCallback {
             } else {
                 Chip chip = new Chip(requireContext());
                 chip.setText(tagInput.getText());
+                tagInput.getText().clear();
+                tagInput.clearFocus();
+                //todo maybe hide keyboard
+//                ((InputMethodManager)(requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE))).hideSoftInputFromWindow();
                 chip.setCloseIconVisible(true);
                 chipGroup.addView(chip);
             }

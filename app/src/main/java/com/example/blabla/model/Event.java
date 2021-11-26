@@ -17,6 +17,7 @@ public class Event {
     private Location location;
     private LongLat longLat;
     private double distance;
+    private String[] tags;
     public Event(String title, String description, String address, LongLat longlat) {
         this.title = title;
         this.description = description;
