@@ -4403,3 +4403,40 @@ Caused by: com.intellij.openapi.progress.ProcessCanceledException
 	at com.intellij.psi.impl.source.tree.java.PsiLiteralExpressionImpl.getReferences(PsiLiteralExpressionImpl.java:193)
 	at com.haulmont.jpb.reference.hard.LiteralExpressionsAnnotator.annotate(LiteralExpressionsAnnotator.java:38)
 	... 34 more
+2021-11-25 18:15:36,951 [71958209]   WARN - cution.filters.CompositeFilter - KotlinExceptionFilter.applyFilter() took 16167 ms on '''	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204) ~[na:na]
+''' 
+2021-11-25 18:15:53,315 [71974573]   WARN - cution.filters.CompositeFilter - AdvancedExceptionFilter.applyFilter() took 16364 ms on '''	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204) ~[na:na]
+''' 
+2021-11-25 18:16:15,958 [71997216]   WARN - cution.filters.CompositeFilter - KotlinExceptionFilter.applyFilter() took 22640 ms on '''	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+''' 
+2021-11-25 18:16:35,442 [72016700]   WARN - cution.filters.CompositeFilter - KotlinExceptionFilter.applyFilter() took 19482 ms on '''	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+''' 
+2021-11-25 18:16:37,185 [72018443]   WARN - cution.filters.CompositeFilter - KotlinExceptionFilter.applyFilter() took 1742 ms on '''	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+''' 
+2021-11-25 18:17:27,506 [72068764]   WARN - cution.filters.CompositeFilter - KotlinExceptionFilter.applyFilter() took 50319 ms on '''	at java.base/java.lang.Thread.run(Thread.java:830) ~[na:na]
+''' 
+2021-11-25 18:17:38,927 [72080185]   WARN - cution.filters.CompositeFilter - JSDebuggerUrlFilter.applyFilter() took 11419 ms on '''2021-11-25 18:15:36.937  INFO [event-microservice,,] 436 --- [freshExecutor-0] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://localhost:8761: The target server failed to respond
+''' 
+2021-11-25 18:17:48,734 [72089992]   WARN - cution.filters.CompositeFilter - NodeStackTraceFilter.applyFilter() took 9804 ms on '''	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+''' 
+2021-11-25 18:17:58,374 [72099632]   WARN - cution.filters.CompositeFilter - KotlinExceptionFilter.applyFilter() took 9638 ms on '''	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+''' 
+2021-11-25 18:18:19,325 [72120583]   WARN - cution.filters.CompositeFilter - KotlinExceptionFilter.applyFilter() took 20942 ms on '''	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+''' 
+2021-11-25 18:18:20,957 [72122215]   WARN - cution.filters.CompositeFilter - AdvancedExceptionFilter.applyFilter() took 1632 ms on '''	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+''' 
+2021-11-25 18:18:38,602 [72139860]   WARN - cution.filters.CompositeFilter - KotlinExceptionFilter.applyFilter() took 17630 ms on '''	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+''' 
+2021-11-25 18:18:40,264 [72141522]   WARN - cution.filters.CompositeFilter - KotlinExceptionFilter.applyFilter() took 1650 ms on '''	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+''' 
+2021-11-25 18:18:56,327 [72157585]   WARN - cution.filters.CompositeFilter - KotlinExceptionFilter.applyFilter() took 16061 ms on '''	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+''' 
+Nov 25, 2021 6:29:43 PM java.util.prefs.FileSystemPreferences syncWorld
+WARNING: Couldn't flush user prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2021-11-25 18:34:36,177 [73097435]   WARN - ctionSystem.impl.ActionUpdater - Slow (132 ms) 'update' on action VCS Label () of class com.intellij.openapi.vcs.actions.VcsToolbarLabelAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-25 18:44:44,242 [73705500]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 10331ms, details saved to /home/youyou/.cache/JetBrains/IntelliJIdea2021.2/log/threadDumps-freeze-20211125-184437-IU-212.4746.92-10sec 
+2021-11-25 18:52:26,574 [74167832]   WARN - ctionSystem.impl.ActionUpdater - 25476 ms to expand group child TabList 
+2021-11-25 18:52:28,246 [74169504]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 25485ms, details saved to /home/youyou/.cache/JetBrains/IntelliJIdea2021.2/log/threadDumps-freeze-20211125-185206-IU-212.4746.92-25sec 
+2021-11-25 18:53:05,924 [74207182]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 37163ms, details saved to /home/youyou/.cache/JetBrains/IntelliJIdea2021.2/log/threadDumps-freeze-20211125-185233-IU-212.4746.92-37sec 
+2021-11-25 19:03:36,028 [74837286]   WARN - ctionSystem.impl.ActionUpdater - 2455 ms to expand group child TabList 
+                                                                                                                                                                                                                                         

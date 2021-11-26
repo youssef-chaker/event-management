@@ -38,7 +38,7 @@ import java.util.List;
                 @ColumnResult(name = "id",type = long.class),
                 @ColumnResult(name = "title",type = String.class),
                 @ColumnResult(name = "description",type = String.class),
-                @ColumnResult(name = "distance",type = double.class),
+                @ColumnResult(name = "distance",type = double.class)
         })
 )
 public class Event {
