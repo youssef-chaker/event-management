@@ -34,6 +34,7 @@ import com.example.blabla.databinding.FragmentAddEventBinding;
 import com.example.blabla.model.Event;
 import com.example.blabla.model.Location;
 import com.example.blabla.model.LongLat;
+import com.example.blabla.model.Tag;
 import com.example.blabla.viewmodel.EventViewModel;
 import com.example.blabla.viewmodel.MainViewModel;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -141,9 +142,11 @@ public class AddEventFragment extends Fragment implements OnMapReadyCallback {
 
         addButton.setOnClickListener(v -> {
             Event event = new Event(title.getText().toString(),description.getText().toString(), location.getText().toString(),new LongLat(longtitude,latitude));
-            String[] tags = new String[chipGroup.getChildCount()];
+            Tag[] tags = new Tag[chipGroup.getChildCount()];
             for(int i =0;i< chipGroup.getChildCount();i++){
-                tags[i] = ((Chip)chipGroup.getChildAt(i)).getText().toString();
+                tags[i] = new Tag(
+                        ((Chip)chipGroup.getChildAt(i)).getText().toString()
+                );
             }
 
             event.setTags(tags);

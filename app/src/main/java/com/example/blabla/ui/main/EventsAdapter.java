@@ -17,8 +17,11 @@ import com.example.blabla.R;
 import com.example.blabla.model.Event;
 import com.example.blabla.model.LongLat;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
 
 import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.List;
 
 public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder> {
@@ -42,6 +45,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
         private final TextView description;
         private final CardView card;
         private final TextView distance;
+        private final ChipGroup tags;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -49,6 +53,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
             description = itemView.findViewById(R.id.eventDescription);
             card = itemView.findViewById(R.id.eventCard);
             distance = itemView.findViewById(R.id.distance);
+            tags = itemView.findViewById(R.id.tags);
             card.setOnClickListener(v -> {
                 Log.i(TAG, "ViewHolder: onclick "+getAdapterPosition()+ " "+id);
                 Navigation.findNavController(itemView).navigate(EventsListFragmentDirections.actionEventsListFragmentToEventFragment(id));
@@ -70,6 +75,10 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
         public TextView getDistance() {
             return distance;
         }
+
+        public ChipGroup getTags() {
+            return tags;
+        }
     }
 
 
@@ -86,6 +95,13 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
         holder.getCard().setAnimation(AnimationUtils.loadAnimation(holder.getCard().getContext(),R.anim.fade_transition));
         holder.getTitle().setText(event.getTitle());
         holder.getDescription().setText(event.getDescription());
+        if(event.getTags()!=null){
+            Arrays.stream(event.getTags()).forEach(tag -> {
+                Chip chip = new Chip(holder.getTags().getContext());
+                chip.setText(tag.getValue());
+                holder.getTags().addView(chip);
+            });
+        }
         holder.id = event.getId();
         double distance = event.getDistance();
         if(distance!=0) {
