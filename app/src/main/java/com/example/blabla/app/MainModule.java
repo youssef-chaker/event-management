@@ -36,7 +36,7 @@ public class MainModule {
     public static Repository provideRepo(@ApplicationContext Context context, ExecutorService service,OkHttpClient okHttpClient) {
 
         Retrofit retrofit2 = new Retrofit.Builder()
-                .baseUrl("http:192.168.1.61:8765/")
+                .baseUrl("http:192.168.1.62:8765/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();
@@ -53,7 +53,7 @@ public class MainModule {
     public static KeyCloackRepo proviceKeycloackRepo(ExecutorService service,OkHttpClient okHttpClient){
 
         Retrofit retrofitKeycloack =  new Retrofit.Builder()
-                .baseUrl("http:192.168.1.61:8180/")
+                .baseUrl("http:192.168.1.62:8180/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();

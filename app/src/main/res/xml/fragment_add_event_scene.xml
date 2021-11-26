@@ -25,7 +25,9 @@
             android:layout_width="wrap_content"
             android:id="@+id/add"
             motion:layout_constraintTop_toBottomOf="@+id/lnglat"
-            android:layout_marginTop="64dp" />
+            android:layout_marginTop="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="0dp" />
         <Constraint
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -43,6 +45,31 @@
             android:layout_marginTop="32dp"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/chipGroup"
+            android:id="@+id/locationButton" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintHorizontal_bias="0.497"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/description"
+            android:id="@+id/taginput"
+            android:layout_marginTop="40dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/taginputwrapper"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/chipGroup"
+            android:layout_marginTop="32dp" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">

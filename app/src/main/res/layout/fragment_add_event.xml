@@ -7,19 +7,19 @@
             name="eventViewModel"
             type="com.example.blabla.viewmodel.EventViewModel" />
     </data>
+
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/motionLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutDescription="@xml/fragment_add_event_scene"
         tools:context=".ui.main.AddEventFragment">
-    
+
         <EditText
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:autofillHints=""
             android:ems="10"
             android:hint="@string/title"
             android:inputType="text"
@@ -27,21 +27,77 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    
+
         <EditText
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:autofillHints=""
             android:ems="10"
-            android:text="@={eventViewModel.description}"
             android:hint="@string/description"
             android:inputType="text"
+            android:text="@={eventViewModel.description}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title" />
-    
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/taginput"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="32dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:hint="tags"-->
+        <!--            android:inputType="text"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.293"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/description" />-->
+
+        <RelativeLayout
+            android:id="@+id/taginputwrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description">
+
+            <EditText
+                android:id="@+id/taginput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="tags"
+                android:inputType="text" />
+
+            <ImageButton
+                android:id="@+id/addtagButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/taginput"
+                android:layout_alignRight="@+id/taginput"
+                android:layout_alignBottom="@+id/taginput"
+                android:background="@android:drawable/ic_input_add" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/taginputwrapper">
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:text="test" />-->
+
+        </com.google.android.material.chip.ChipGroup>
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/confirm"
             android:layout_width="wrap_content"
@@ -49,12 +105,12 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:clickable="true"
+            android:contentDescription="@string/todo"
+            android:enabled="false"
             android:src="@drawable/ic_baseline_check_24"
             app:layout_constraintBottom_toBottomOf="@id/mapView"
-            app:layout_constraintEnd_toEndOf="@id/mapView"
-            android:contentDescription="@string/todo"
-            android:enabled="false"/>
-    
+            app:layout_constraintEnd_toEndOf="@id/mapView" />
+
         <Button
             android:id="@+id/locationButton"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -64,8 +120,8 @@
             android:text="@string/location"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/description" />
-    
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
         <Button
             android:id="@+id/add"
             android:layout_width="wrap_content"
@@ -75,34 +131,34 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/locationButton" />
-    
+
         <com.google.android.gms.maps.MapView
             android:id="@+id/mapView"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:elevation="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:elevation="5dp"/>
-    
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/location"
-            android:text="@{eventViewModel.address}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{eventViewModel.address}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="268dp" />
-    
+
         <TextView
             android:id="@+id/lnglat"
             android:layout_width="wrap_content"
-            android:text="@{ (eventViewModel.longtitude==null &amp;&amp; eventViewModel.latitude==null) ? `` : eventViewModel.longtitude.toString() + ` : `+eventViewModel.latitude.toString() }"
             android:layout_height="wrap_content"
+            android:text="@{ (eventViewModel.longtitude==null &amp;&amp; eventViewModel.latitude==null) ? `` : eventViewModel.longtitude.toString() + ` : `+eventViewModel.latitude.toString() }"
             tools:layout_editor_absoluteX="111dp"
             tools:layout_editor_absoluteY="268dp" />
-    
-    
+
+
     </androidx.constraintlayout.motion.widget.MotionLayout>
 </layout>

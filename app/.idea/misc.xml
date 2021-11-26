@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="src/main/res/layout/card.xml" value="0.35885416666666664" />
+        <entry key="src/main/res/layout/fragment_add_event.xml" value="0.25" />
         <entry key="src/main/res/layout/fragment_event.xml" value="0.35885416666666664" />
         <entry key="src/main/res/layout/fragment_events_list.xml" value="0.35885416666666664" />
+        <entry key="src/main/res/layout/input_chip.xml" value="0.35885416666666664" />
+        <entry key="src/main/res/xml/input_chip.xml" value="0.35885416666666664" />
       </map>
     </option>
   </component>

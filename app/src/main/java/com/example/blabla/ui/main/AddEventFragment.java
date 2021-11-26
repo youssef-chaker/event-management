@@ -13,12 +13,17 @@ import androidx.lifecycle.SavedStateViewModelFactory;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
+import android.text.Editable;
+import android.text.Spanned;
+import android.text.TextWatcher;
+import android.text.style.ImageSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +39,9 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipDrawable;
+import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.IOException;
@@ -58,9 +66,13 @@ public class AddEventFragment extends Fragment implements OnMapReadyCallback {
     private double latitude;
     private EditText title;
     private EditText description;
+    private EditText tagInput;
     private FloatingActionButton fab;
     private FragmentAddEventBinding binding;
+    private ImageButton addTagButton;
+    private ChipGroup chipGroup;
     private static final String TAG = "AddEventFragment";
+    private int SpannedLength = 0,chipLength = 4;
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -115,6 +127,9 @@ public class AddEventFragment extends Fragment implements OnMapReadyCallback {
         mapView.getMapAsync(this);
         locationButton = binding.locationButton;
         addButton = binding.add;
+        tagInput = binding.taginput;
+        addTagButton = binding.addtagButton;
+        chipGroup = binding.chipGroup;
         locationButton.setOnClickListener(v -> {
             ((MotionLayout)binding.motionLayout).transitionToEnd();
         });
@@ -144,6 +159,51 @@ public class AddEventFragment extends Fragment implements OnMapReadyCallback {
                     Log.e(TAG, "onFailure: ", t);
                 }
             });
+        });
+
+//        tagInput.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                if (s.length() == SpannedLength - chipLength)
+//                {
+//                    SpannedLength = s.length();
+//                }
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//                if(s.length() - SpannedLength == chipLength) {
+//                    ChipDrawable chip = ChipDrawable.createFromResource(getContext(), R.xml.input_chip);
+//                    chip.setText(s.subSequence(SpannedLength,s.length()));
+//                    chip.setBounds(0, 0, chip.getIntrinsicWidth(), chip.getIntrinsicHeight());
+//                    ImageSpan span = new ImageSpan(chip);
+//                    s.setSpan(span, SpannedLength, s.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//                    SpannedLength = s.length();
+//                }
+//            }
+//        });
+
+//        ChipDrawable chip = ChipDrawable.createFromResource(requireContext(),R.xml.input_chip);
+//        chip.setText("testchip");
+//        chip.setBounds(0,0,chip.getIntrinsicWidth(),chip.getIntrinsicHeight());
+//        ImageSpan span = new ImageSpan(chip);
+//        tagInput.getText().setSpan(span,0,"testchip".length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        addTagButton.setOnClickListener(v -> {
+            if(tagInput.getText().toString().trim().length() < 2) {
+                Toast.makeText(requireContext(), "please enter a tag", Toast.LENGTH_SHORT).show();
+            } else {
+                Chip chip = new Chip(requireContext());
+                chip.setText(tagInput.getText());
+                chip.setCloseIconVisible(true);
+                chipGroup.addView(chip);
+            }
         });
 
         return binding.getRoot();
