@@ -1,6 +1,7 @@
 package com.youssef.pharmacie.eventmicroservice;
 
 import com.vividsolutions.jts.geom.Geometry;
+import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.Point;
 import com.vividsolutions.jts.io.ParseException;
 import com.vividsolutions.jts.io.WKTReader;
@@ -66,6 +67,11 @@ public class EventController {
 //            events = eventRepo.getEvents();
 //        }
 //        return ResponseEntity.ok(events);
+//    }
+
+//    @GetMapping("/test")
+//    public String dsfsd(){
+//        return GeometryFactory.
 //    }
 
     @GetMapping

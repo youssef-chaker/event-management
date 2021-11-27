@@ -2,6 +2,8 @@ package com.youssef.pharmacie.eventmicroservice;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.vividsolutions.jts.geom.Point;
+import com.vividsolutions.jts.io.ParseException;
+import com.vividsolutions.jts.io.WKTReader;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -38,6 +40,7 @@ import java.util.List;
                 @ColumnResult(name = "id",type = long.class),
                 @ColumnResult(name = "title",type = String.class),
                 @ColumnResult(name = "description",type = String.class),
+                @ColumnResult(name = "point",type = String.class),
                 @ColumnResult(name = "distance",type = double.class)
         })
 )
@@ -90,4 +93,13 @@ public class Event {
         this.distance = distance;
         this.id = id;
     }
+
+    public Event(long id,String title, String description, String point,double distance) throws ParseException {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.point = (Point) new WKTReader().read(point);
+        this.distance=distance;
+    }
+
 }

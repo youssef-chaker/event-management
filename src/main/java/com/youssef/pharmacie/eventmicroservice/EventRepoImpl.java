@@ -37,7 +37,7 @@ public class EventRepoImpl implements EventRepo{
 //        var query = entityManager.
 //                createQuery("select e.id,e.title,e.description from Event e order by ST_Distance(ST_MakePoint(7,35), point) "+ascORdesc);
 //        var query = entityManager.createNativeQuery("select id,title,description,owner_id,ST_Distance(ST_MakePoint("+longitude+","+latitude+"), point) as distance from events order by distance","distanceMapping");
-        var query = entityManager.createNativeQuery("select id,title,description,point,ST_Distance( cast(ST_MakePoint(10.2230407,36.8809683) as geography) , cast(point as geography) ) as distance from events order by distance","dist");
+        var query = entityManager.createNativeQuery("select id,title,description,st_astext(point) as point,ST_Distance( cast(ST_MakePoint("+longitude+","+latitude+") as geography) , cast(point as geography) ) as distance from events order by distance","dist");
         var resultset = (List<Event>)query.getResultList();
         resultset.forEach(e -> {
             e.setTags(entityManager.createQuery("select t from tags t where t.event.id="+e.getId(),Tag.class).getResultList());
