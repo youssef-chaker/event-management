@@ -16,7 +16,7 @@ pipeline {
         }
         stage('PUSH TO DOCKERHUB') {
             steps {
-            sh 'docker push '
+            sh 'docker push thiccmoustache/namingserver:1'
             }
         }
     }
