@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('BUILD DOCKER IMAGE') {
             steps {
-                sh 'docker build -t thiccmoustache/namingserver:1 .'
+                sh 'docker build -t thiccmoustache/namingserver:$BUILD_NUMBER .'
             }
         }
         stage('LOGIN TO DOCKERHUB'){
@@ -16,7 +16,7 @@ pipeline {
         }
         stage('PUSH TO DOCKERHUB') {
             steps {
-            sh 'docker push thiccmoustache/namingserver:1'
+            sh 'docker push thiccmoustache/namingserver:$BUILD_NUMBER'
             }
         }
     }
