@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('BUILD DOCKER IMAGE') {
             steps {
-                sh 'docker build -t thiccmoustache/apigateway:$BUILD_NUMBER .'
+                sh 'docker build --no-cache=true -t thiccmoustache/apigateway:$BUILD_NUMBER .'
             }
         }
         stage('LOGIN TO DOCKERHUB'){
