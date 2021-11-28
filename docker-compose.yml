@@ -1,0 +1,70 @@
+version: '3.7'
+
+services:
+  # db:
+  #   image: mysql
+  #   ports:
+  #     - "3307:3306"
+  #   networks:
+  #     - pharmacie-network
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: youssef
+  #     MYSQL_DATABASE: pharmacies
+  #     MYSQL_USER: youssef
+  #     MYSQL_PASSWORD: youssef
+  db:
+    image: postgis/postgis
+    ports:
+      - "5432:5432"
+    networks:
+      - pharmacie-network
+    environment:
+      POSTGRES_USER: youssef
+      POSTGRES_PASSWORD: youssef
+      POSTGRES_DB: pharmacie
+  naming-server:
+    image: pharmacie/naming-server:0.0.1-SNAPSHOT 
+    ports:
+      - "8761:8761"
+    networks:
+      - pharmacie-network
+  config-server:
+    image: thiccmoustache/configserver:0.0.1-SNAPSHOT
+    ports: 
+      - "8888:8888"
+    networks:
+      - pharmacie-network
+  zipkin:
+    image: openzipkin/zipkin
+    ports: 
+      - "9411:9411"
+    networks:
+      - pharmacie-network
+  keycloack:
+    image: quay.io/keycloak/keycloak
+    ports:
+      - "8180:8080"
+    networks:
+      - pharmacie-network
+    environment:
+      KEYCLOAK_USER: youssef
+      KEYCLOAK_PASSWORD : youssef
+      DB_ADDR: db
+      DB_VENDOR: postgres
+      DB_DATABASE: pharmacie
+      DB_USER: youssef
+      DB_PASSWORD: youssef
+    depends_on:
+      - db
+  jenkins:
+    image: jenkins/jenkins
+    privileged: true
+    ports: 
+      - "8181:8080"
+    volumes:
+      - ./jenkins/jenkins_home:/var/jenkins_home
+      - /usr/bin/docker:/usr/bin/docker
+    networks:
+      - pharmacie-network
+networks:
+  pharmacie-network:
