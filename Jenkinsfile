@@ -16,7 +16,7 @@ pipeline {
                 }
             }
 
-            steps{
+            steps {
                 pwd()
             }
 
@@ -24,12 +24,6 @@ pipeline {
                 sh 'ls -la'
             }
 
-        }
-
-        stage('dockerhub login') {
-            steps {
-                sh 'docker login -u $DOCKERHUB_CREDS_USR -p $DOCKERHUB_CREDS_PSW'
-            }
         }
 
         
