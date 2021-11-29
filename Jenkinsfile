@@ -9,7 +9,11 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn install -DskipTests'
+                retry{
+                    timeout(time:3,unit:'MINUTES'){
+                        sh 'mvn install -DskipTests'
+                    }
+                }
             }
         }
         
