@@ -14,7 +14,7 @@ pipeline {
                         sh 'mvn install -DskipTests'
                     }
                 }
-                pwd()
+                sh 'pwd'
                 sh 'ls -la'
             }
 
