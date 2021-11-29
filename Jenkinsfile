@@ -24,6 +24,7 @@ pipeline {
         stage('extract jar file'){
             steps {
                 sh "jar -xf ./target/*.jar"
+                sh 'ls -a target/'
             }
         }
 
