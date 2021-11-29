@@ -4,7 +4,7 @@ pipeline {
         DOCKERHUB_CREDS = credentials("dockerhub")
     }
     tools {
-        maven 'maven 3.8.4'
+        maven 'maven3.8.4'
         jdk 'jdk9'
     }
     stages {
@@ -14,6 +14,12 @@ pipeline {
             }
         }
         
+    }
+
+    post{
+        always {
+            cleanWs()
+        }
     }
 
 }
