@@ -15,13 +15,29 @@ pipeline {
                     }
                 }
             }
+
+            steps{
+                pwd()
+            }
+
+            steps {
+                sh 'ls -la'
+            }
+
         }
+
+        stage('dockerhub login') {
+            steps {
+                sh 'docker login -u $DOCKERHUB_CREDS_USR -p $DOCKERHUB_CREDS_PSW'
+            }
+        }
+
         
     }
 
     post{
         always {
-            cleanWs()
+            sh 'docker logout'
         }
     }
 
