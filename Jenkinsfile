@@ -31,8 +31,16 @@ pipeline {
 
         stage('build docker image'){
             steps {
-                echo "building docker image"
+                sh 'docker build -t thiccmoustache/apigateway:$BUILD_NUMBER .'
             }
+        }
+
+        stage('dockerhub login') {
+            sh 'docker login -u $DOCKERHUB_CREDS_USR -p $DOCKERHUB_CREDS_PSW'
+        }
+
+        stage('push to dockerhub'){
+            sh 'docker push thiccmoustache/namingserver:$BUILD_NUMBER'
         }
 
         
