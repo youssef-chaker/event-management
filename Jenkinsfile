@@ -43,7 +43,7 @@ pipeline {
 
         stage('push to dockerhub'){
             steps {
-                sh 'docker push thiccmoustache/namingserver:$BUILD_NUMBER'
+                sh 'docker push thiccmoustache/apigateway:$BUILD_NUMBER'
             }
         }
 
