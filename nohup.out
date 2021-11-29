@@ -1,0 +1,165 @@
+2021-11-29 18:44:21,908 [   1520]   WARN - llij.ide.plugins.PluginManager - id redefinition ([row,col,system-id]: [2,3,"product classpath"]) 
+2021-11-29 18:45:56,924 [  96536]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 10109ms, details saved to /home/youyou/.cache/JetBrains/IntelliJIdea2021.2/log/threadDumps-freeze-20211129-184551-IU-212.4746.92-10sec 
+2021-11-29 18:46:00,314 [  99926]   WARN - l.NotificationGroupManagerImpl - Notification group CodeWithMe is already registered (group=com.intellij.notification.NotificationGroup@6a1eead6). Plugin descriptor: PluginDescriptor(name=Code With Me, id=com.jetbrains.codeWithMe, descriptorPath=plugin.xml, path=/home/samir/Downloads/idea-IU-212.4746.92/plugins/cwm-plugin, version=212.4746.92, package=null) 
+2021-11-29 18:46:29,560 [ 129172]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 5266ms, details saved to /home/youyou/.cache/JetBrains/IntelliJIdea2021.2/log/threadDumps-freeze-20211129-184629-IU-212.4746.92-5sec 
+2021-11-29 18:46:31,978 [ 131590]   WARN - ctionSystem.impl.ActionUpdater - Slow (777 ms) 'update' on action Load Script Configurations (The Gradle Kotlin DSL script configuration has been changed. Load the changes to get code insight without importing the external Gradle project.) of class org.jetbrains.kotlin.idea.scripting.gradle.LoadConfigurationAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:46:37,813 [ 137425]   WARN - ctionSystem.impl.ActionUpdater - 2141 ms to expand group child OpenFile 
+2021-11-29 18:46:37,885 [ 137497]   WARN - ctionSystem.impl.ActionUpdater - Slow (130 ms) 'getChildren' on action null (null) of class com.intellij.openapi.wm.impl.ToolWindowHeader$1. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:46:41,471 [ 141083]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 5917ms, details saved to /home/youyou/.cache/JetBrains/IntelliJIdea2021.2/log/threadDumps-freeze-20211129-184640-IU-212.4746.92-5sec 
+2021-11-29 18:46:46,897 [ 146509]   WARN - ctionSystem.impl.ActionUpdater - 1716 ms to expand group child TabList 
+2021-11-29 18:46:46,898 [ 146510]   WARN - ctionSystem.impl.ActionUpdater - 1772 ms to expand group child CWMTelephonyGroup 
+2021-11-29 18:46:46,898 [ 146510]   WARN - ctionSystem.impl.ActionUpdater - 1773 ms to expand group child CodeWithMeNavbarGroup 
+2021-11-29 18:46:51,668 [ 151280]   WARN - ctionSystem.impl.ActionUpdater - 1887 ms to expand group child TabList 
+2021-11-29 18:46:51,669 [ 151281]   WARN - ctionSystem.impl.ActionUpdater - 4231 ms to expand group child CWMTelephonyGroup 
+2021-11-29 18:46:51,669 [ 151281]   WARN - ctionSystem.impl.ActionUpdater - 4237 ms to expand group child CodeWithMeNavbarGroup 
+2021-11-29 18:46:52,651 [ 152263]   WARN - ctionSystem.impl.ActionUpdater - Slow (511 ms) 'update' on action Show Code With Me popup () of class com.jetbrains.rdserver.actions.CWMHostShowPopupAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:03,103 [ 162715]   WARN - ctionSystem.impl.ActionUpdater - 6394 ms to expand group child TabList 
+2021-11-29 18:47:03,108 [ 162720]   WARN - ctionSystem.impl.ActionUpdater - 9403 ms to expand group child CWMTelephonyGroup 
+2021-11-29 18:47:03,108 [ 162720]   WARN - ctionSystem.impl.ActionUpdater - 9403 ms to expand group child CodeWithMeNavbarGroup 
+2021-11-29 18:47:06,770 [ 166382]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 9537ms, details saved to /home/youyou/.cache/JetBrains/IntelliJIdea2021.2/log/threadDumps-freeze-20211129-184702-IU-212.4746.92-9sec 
+2021-11-29 18:47:09,836 [ 169448]   WARN - ctionSystem.impl.ActionUpdater - 2790 ms to expand group child TabList 
+2021-11-29 18:47:09,836 [ 169448]   WARN - ctionSystem.impl.ActionUpdater - 2418 ms to expand group child TabList 
+2021-11-29 18:47:15,650 [ 175262]   WARN - ctionSystem.impl.ActionUpdater - 5395 ms to expand group child null 
+2021-11-29 18:47:21,750 [ 181362]   WARN - ctionSystem.impl.ActionUpdater - 11496 ms to expand group child null 
+2021-11-29 18:47:22,231 [ 181843]   WARN - ctionSystem.impl.ActionUpdater - 6580 ms to expand group child com.github.chencn.yamlandprops 
+2021-11-29 18:47:22,516 [ 182128]   WARN - dea.updater.SdkComponentSource - Still waiting for package manifests to be fetched remotely. 
+2021-11-29 18:47:22,662 [ 182274]   WARN - ols.jenkins.logic.LoginService - Jenkins server is not setup, authentication will not happen 
+2021-11-29 18:47:27,590 [ 187202]   WARN - ctionSystem.impl.ActionUpdater - Slow (171 ms) 'getChildren' on action  () of class com.intellij.openapi.actionSystem.DefaultCompactActionGroup. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:27,783 [ 187395]   WARN - ctionSystem.impl.ActionUpdater - 1266 ms to expand group child ShowIntentionsGroup 
+2021-11-29 18:47:29,616 [ 189228]   WARN - ctionSystem.impl.ActionUpdater - 1686 ms to expand group child LightEditOpenFileInProject 
+2021-11-29 18:47:29,616 [ 189228]   WARN - ctionSystem.impl.ActionUpdater - 1832 ms to expand group child LightEditModePopup 
+2021-11-29 18:47:30,171 [ 189783]   WARN - ctionSystem.impl.ActionUpdater - Slow (145 ms) 'update' on action Copy as Rich Text (Copy selection to clipboard as rich text (in RTF and HTML formats)) of class com.intellij.openapi.editor.richcopy.CopyAsRichTextAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:31,930 [ 191542]   WARN - ctionSystem.impl.ActionUpdater - 1317 ms to expand group child StringManipulation.Group.Main 
+2021-11-29 18:47:31,930 [ 191542]   WARN - ctionSystem.impl.ActionUpdater - 1319 ms to expand group child StringManipulation.EditorPopupMenu 
+2021-11-29 18:47:32,763 [ 192375]   WARN - dea.updater.SdkComponentSource - Still waiting for package manifests to be fetched remotely. 
+2021-11-29 18:47:38,200 [ 197812]   WARN - ctionSystem.impl.ActionUpdater - 11667 ms to expand group child WeighingNewGroup 
+2021-11-29 18:47:38,204 [ 197816]   WARN - ctionSystem.impl.ActionUpdater - 6224 ms to expand group child RefactoringMenu 
+2021-11-29 18:47:38,638 [ 198250]   WARN - ctionSystem.impl.ActionUpdater - Slow (419 ms) 'update' on action Modify Object... () of class com.intellij.database.actions.ddl.ModifyObjectAction$Public. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:39,029 [ 198641]   WARN - ctionSystem.impl.ActionUpdater - Slow (239 ms) 'update' on action Table alias... () of class com.intellij.sql.actions.SqlIntroduceTableAliasAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:39,753 [ 199365]   WARN - ctionSystem.impl.ActionUpdater - Slow (723 ms) 'update' on action New Module... (Add new module to the project) of class com.intellij.openapi.roots.ui.configuration.actions.NewModuleInGroupAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:39,777 [ 199389]   WARN - ctionSystem.impl.ActionUpdater - 13297 ms to expand group child WeighingNewGroup 
+2021-11-29 18:47:40,325 [ 199937]   WARN - ctionSystem.impl.ActionUpdater - 8347 ms to expand group child RefactoringMenu 
+2021-11-29 18:47:40,356 [ 199968]   WARN - ctionSystem.impl.ActionUpdater - 8392 ms to expand group child EditorPopupMenu1.FindRefactor 
+2021-11-29 18:47:43,133 [ 202745]   WARN - ctionSystem.impl.ActionUpdater - 1974 ms to expand group child AnalyzeActions 
+2021-11-29 18:47:43,143 [ 202755]   WARN - ctionSystem.impl.ActionUpdater - 2771 ms to expand group child AnalyzeMenu 
+2021-11-29 18:47:43,143 [ 202755]   WARN - ctionSystem.impl.ActionUpdater - 2787 ms to expand group child EditorPopupMenuAnalyze 
+2021-11-29 18:47:43,143 [ 202755]   WARN - ctionSystem.impl.ActionUpdater - 11213 ms to expand group child EditorPopupMenu1 
+2021-11-29 18:47:44,564 [ 204176]   WARN - ctionSystem.impl.ActionUpdater - 1421 ms to expand group child EditorPopupMenu2 
+2021-11-29 18:47:46,145 [ 205757]   WARN - ctionSystem.impl.ActionUpdater - Slow (1374 ms) 'update' on action SQL Scripts () of class com.intellij.database.actions.GenerateSqlActions$SqlActionsGroup. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:46,146 [ 205758]   WARN - ctionSystem.impl.ActionUpdater - 1581 ms to expand group child DatabaseView.Sql.Scripts 
+2021-11-29 18:47:46,302 [ 205914]   WARN - ctionSystem.impl.ActionUpdater - 6415 ms to expand group child showEntityDdl 
+2021-11-29 18:47:46,862 [ 206474]   WARN - ctionSystem.impl.ActionUpdater - 3718 ms to expand group child EditorPopupMenu2 
+2021-11-29 18:47:47,314 [ 206926]   WARN - ctionSystem.impl.ActionUpdater - Slow (331 ms) 'update' on action Copy (Copy to clipboard) of class com.intellij.ide.actions.CopyAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:47,553 [ 207165]   WARN - ctionSystem.impl.ActionUpdater - Slow (167 ms) 'update' on action Add to Favorites () of class com.intellij.ide.favoritesTreeView.actions.AddToFavoritesActionGroup. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:48,248 [ 207860]   WARN - ctionSystem.impl.ActionUpdater - Slow (175 ms) 'update' on action Delete (Delete selected item) of class com.intellij.ide.actions.DeleteAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:48,838 [ 208450]   WARN - ctionSystem.impl.ActionUpdater - 1507 ms to expand group child EditorPopupMenu.GoTo 
+2021-11-29 18:47:52,727 [ 212339]   WARN - ctionSystem.impl.ActionUpdater - 3888 ms to expand group child GenerateGroup 
+2021-11-29 18:47:54,932 [ 214544]   WARN - ctionSystem.impl.ActionUpdater - 5808 ms to expand group child AddToTestNGSuite 
+2021-11-29 18:47:55,121 [ 214733]   WARN - ctionSystem.impl.ActionUpdater - 6282 ms to expand group child Generate 
+2021-11-29 18:47:55,426 [ 215038]   WARN - ctionSystem.impl.ActionUpdater - 6555 ms to expand group child addToTempGroup 
+2021-11-29 18:47:56,910 [ 216522]   WARN - ctionSystem.impl.ActionUpdater - 1227 ms to expand group child Console.Jdbc.RunContextGroup 
+2021-11-29 18:47:57,157 [ 216769]   WARN - ctionSystem.impl.ActionUpdater - 1731 ms to expand group child EditorPopupMenuDebug 
+2021-11-29 18:47:57,392 [ 217004]   WARN - ctionSystem.impl.ActionUpdater - Slow (239 ms) 'update' on action Attach Session (Attaches a file to a session) of class com.intellij.database.run.actions.ChooseSessionAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:58,687 [ 218299]   WARN - ctionSystem.impl.ActionUpdater - Slow (1293 ms) 'update' on action Evaluate Expression... (Evaluate arbitrary expression) of class com.intellij.xdebugger.impl.actions.EvaluateAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:58,687 [ 218299]   WARN - ctionSystem.impl.ActionUpdater - 1293 ms to expand group child EvaluateExpression 
+2021-11-29 18:47:58,693 [ 218305]   WARN - ctionSystem.impl.ActionUpdater - 1299 ms to expand group child Console.Jdbc.ExplainGroup 
+2021-11-29 18:47:59,287 [ 218899]   WARN - ctionSystem.impl.ActionUpdater - Slow (593 ms) 'update' on action Export Data... (Export all data to file or clipboard) of class com.intellij.database.run.actions.ShowDumpDialogAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:59,422 [ 219034]   WARN - ctionSystem.impl.ActionUpdater - Slow (134 ms) 'update' on action Add to Watches () of class com.intellij.xdebugger.impl.actions.AddToWatchesAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:47:59,426 [ 219038]   WARN - ctionSystem.impl.ActionUpdater - 3743 ms to expand group child Console.Jdbc.RunContextGroup 
+2021-11-29 18:47:59,523 [ 219135]   WARN - ctionSystem.impl.ActionUpdater - 10653 ms to expand group child RunContextGroup 
+2021-11-29 18:48:00,012 [ 219624]   WARN - ctionSystem.impl.ActionUpdater - 4586 ms to expand group child EditorPopupMenuDebug 
+2021-11-29 18:48:00,440 [ 220052]   WARN - ctionSystem.impl.ActionUpdater - 11592 ms to expand group child RunContextPopupGroup 
+2021-11-29 18:48:00,440 [ 220052]   WARN - ctionSystem.impl.ActionUpdater - 12179 ms to expand group child ProjectViewPopupMenuRunGroup 
+2021-11-29 18:48:02,072 [ 221684]   WARN - ctionSystem.impl.ActionUpdater - Slow (770 ms) 'getChildren' on action  () of class com.intellij.ide.projectView.actions.MarkSourceRootActionGroup. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:02,315 [ 221927]   WARN - ctionSystem.impl.ActionUpdater - 1367 ms to expand group child MarkRootGroup 
+2021-11-29 18:48:02,792 [ 222404]   WARN - ctionSystem.impl.ActionUpdater - Slow (261 ms) 'update' on action Deployment () of class com.jetbrains.plugins.webDeployment.actions.DeploymentActionGroup. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:02,799 [ 222411]   WARN - ctionSystem.impl.ActionUpdater - 1856 ms to expand group child ProjectViewPopupMenuSettingsGroup 
+2021-11-29 18:48:06,518 [ 226130]   WARN - ctionSystem.impl.ActionUpdater - 6505 ms to expand group child RunClass 
+2021-11-29 18:48:06,532 [ 226144]   WARN - ctionSystem.impl.ActionUpdater - 6519 ms to expand group child RunContextGroupInner 
+2021-11-29 18:48:07,083 [ 226695]   WARN - ctionSystem.impl.ActionUpdater - Slow (462 ms) 'update' on action Attach Session (Attaches a file to a session) of class com.intellij.database.run.actions.ChooseSessionAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:20,993 [ 240605]   WARN - ctionSystem.impl.ActionUpdater - Slow (13803 ms) 'update' on action Execute (Execute queries in console) of class com.intellij.database.actions.RunQueryAction$Alt1. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:20,994 [ 240606]   WARN - ctionSystem.impl.ActionUpdater - 13803 ms to expand group child Console.Jdbc.Execute 
+2021-11-29 18:48:21,024 [ 240636]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 13803ms, details saved to /home/youyou/.cache/JetBrains/IntelliJIdea2021.2/log/threadDumps-freeze-20211129-184812-IU-212.4746.92-13sec 
+2021-11-29 18:48:21,076 [ 240688]   WARN - ctionSystem.impl.ActionUpdater - 14542 ms to expand group child Console.Jdbc.RunContextGroup 
+2021-11-29 18:48:21,076 [ 240688]   WARN - ctionSystem.impl.ActionUpdater - 21063 ms to expand group child RunContextGroup 
+2021-11-29 18:48:21,082 [ 240694]   WARN - ctionSystem.impl.ActionUpdater - 21069 ms to expand group child RunContextPopupGroup 
+2021-11-29 18:48:21,084 [ 240696]   WARN - ctionSystem.impl.ActionUpdater - 21071 ms to expand group child EditorPopupMenu.Run 
+2021-11-29 18:48:21,790 [ 241402]   WARN - ctionSystem.impl.ActionUpdater - Slow (149 ms) 'update' on action Show Applied Styles For Tag () of class com.intellij.psi.css.actions.ShowAppliedStylesAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:21,790 [ 241402]   WARN - ctionSystem.impl.ActionUpdater - 34886 ms to expand group child EditorLangPopupMenu 
+2021-11-29 18:48:22,965 [ 242577]   WARN - ctionSystem.impl.ActionUpdater - 20150 ms to expand group child UML.Group 
+2021-11-29 18:48:23,029 [ 242641]   WARN - ctionSystem.impl.ActionUpdater - 1221 ms to expand group child UML.EditorGroup 
+2021-11-29 18:48:23,154 [ 242766]   WARN - ctionSystem.impl.ActionUpdater - Slow (123 ms) 'update' on action Insert Schema Annotation (Insert a reference to this file's root protobuf message, enabling completion, validation, and other features) of class com.intellij.protobuf.ide.actions.InsertSchemaDirectiveAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:23,500 [ 243112]   WARN - ctionSystem.impl.ActionUpdater - Slow (228 ms) 'update' on action Search this function calls () of class com.intellij.javascript.trace.execution.actions.SearchFunctionAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:23,799 [ 243411]   WARN - ctionSystem.impl.ActionUpdater - Slow (104 ms) 'update' on action Change Template Data Language () of class com.intellij.psi.templateLanguages.ChangeTemplateDataLanguageAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:23,933 [ 243545]   WARN - ctionSystem.impl.ActionUpdater - Slow (125 ms) 'update' on action Convert Java File to Kotlin File () of class org.jetbrains.kotlin.idea.actions.JavaToKotlinAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:24,139 [ 243751]   WARN - ctionSystem.impl.ActionUpdater - Slow (155 ms) 'update' on action Validate (Run validation on all files in the selected items) of class com.intellij.javaee.web.compiler.options.ValidateAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:25,160 [ 244772]   WARN - ctionSystem.impl.ActionUpdater - Slow (105 ms) 'update' on action Restore Preview Text () of class com.intellij.application.options.colors.FontEditorPreview$RestorePreviewTextAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:26,320 [ 245932]   WARN - ctionSystem.impl.ActionUpdater - Slow (554 ms) 'update' on action Apply Changes and Restart Activity (Attempt to apply resource and code changes and restart activity.) of class com.android.tools.idea.run.ui.ApplyChangesAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:26,683 [ 246295]   WARN - ctionSystem.impl.ActionUpdater - Slow (102 ms) 'update' on action Space: The Integrated Team Environment () of class com.intellij.space.actions.SpaceMainToolBarAction. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-11-29 18:48:28,218 [ 247830]   WARN - ctionSystem.impl.ActionUpdater - 1638 ms to expand group child RefactoringMenu 
+2021-11-29 18:48:28,219 [ 247831]   WARN - ctionSystem.impl.ActionUpdater - 1639 ms to expand group child ProjectViewPopupMenuRefactoringGroup 
+Theme loaded
+2021-11-29 18:50:38,937 [ 378549]   WARN - tartup.impl.StartupManagerImpl - Activities registered via registerPostStartupActivity must be dumb-aware: com.android.tools.idea.nav.safeargs.project.ProjectNavigationResourceModificationTracker$1@677a2b9f 
+2021-11-29 18:50:44,403 [ 384015]   WARN - nSystem.impl.ActionToolbarImpl - Please do not use ActionPlaces.UNKNOWN or the empty place. Any string unique enough to deduce the toolbar location will do. 
+java.lang.Throwable: toolbar creation trace
+	at com.intellij.openapi.actionSystem.impl.ActionToolbarImpl.<init>(ActionToolbarImpl.java:112)
+	at com.intellij.openapi.actionSystem.impl.ActionManagerImpl.createActionToolbar(ActionManagerImpl.java:432)
+	at com.intellij.openapi.actionSystem.impl.ActionManagerImpl.createActionToolbar(ActionManagerImpl.java:426)
+	at com.android.tools.idea.common.error.IssuePanel.createToolbar(IssuePanel.java:244)
+	at com.android.tools.idea.common.error.IssuePanel.createTitlePanel(IssuePanel.java:255)
+	at com.android.tools.idea.common.error.IssuePanel.<init>(IssuePanel.java:124)
+	at com.android.tools.idea.common.surface.DesignSurface.<init>(DesignSurface.java:328)
+	at com.android.tools.idea.uibuilder.surface.NlDesignSurface.<init>(NlDesignSurface.java:398)
+	at com.android.tools.idea.uibuilder.surface.NlDesignSurface$Builder.build(NlDesignSurface.java:327)
+	at com.android.tools.idea.uibuilder.visual.VisualizationForm.<init>(VisualizationForm.java:151)
+	at com.android.tools.idea.uibuilder.visual.VisualizationManager.createPreviewForm(VisualizationManager.java:118)
+	at com.android.tools.idea.uibuilder.visual.VisualizationManager.initToolWindow(VisualizationManager.java:125)
+	at com.android.tools.idea.uibuilder.visual.VisualizationManager$2.run(VisualizationManager.java:268)
+	at com.intellij.util.ui.update.MergingUpdateQueue.execute(MergingUpdateQueue.java:333)
+	at com.intellij.util.ui.update.MergingUpdateQueue.execute(MergingUpdateQueue.java:323)
+	at com.intellij.util.ui.update.MergingUpdateQueue.lambda$flush$1(MergingUpdateQueue.java:273)
+	at com.intellij.util.ui.EdtInvocationManager.invokeAndWaitIfNeeded(EdtInvocationManager.java:148)
+	at com.intellij.util.ui.UIUtil.invokeAndWaitIfNeeded(UIUtil.java:2199)
+	at com.intellij.util.ui.update.MergingUpdateQueue.flush(MergingUpdateQueue.java:284)
+	at com.intellij.util.ui.update.MergingUpdateQueue.run(MergingUpdateQueue.java:242)
+	at com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:240)
+	at com.intellij.util.Alarm$Request.runSafely(Alarm.java:391)
+	at com.intellij.util.Alarm$Request.run(Alarm.java:377)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intellij.util.concurrency.SchedulingWrapper$MyScheduledFutureTask.run(SchedulingWrapper.java:220)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:214)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$200(TransactionGuardImpl.java:21)
+	at com.intellij.openapi.application.TransactionGuardImpl$2.run(TransactionGuardImpl.java:196)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:794)
+	at com.intellij.openapi.application.impl.ApplicationImpl.lambda$invokeLater$4(ApplicationImpl.java:350)
+	at com.intellij.openapi.application.impl.FlushQueue.doRun(FlushQueue.java:84)
+	at com.intellij.openapi.application.impl.FlushQueue.runNextEvent(FlushQueue.java:133)
+	at com.intellij.openapi.application.impl.FlushQueue.flushNow(FlushQueue.java:46)
+	at com.intellij.openapi.application.impl.FlushQueue$FlushNow.run(FlushQueue.java:189)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:776)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:746)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:886)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:755)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$7(IdeEventQueue.java:442)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:825)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$8(IdeEventQueue.java:441)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:794)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:487)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2021-11-29 18:50:48,773 [ 388385]   WARN - ctionSystem.impl.ActionUpdater - 2902 ms to expand group child TabList 
+2021-11-29 18:50:48,777 [ 388389]   WARN - ctionSystem.impl.ActionUpdater - 2906 ms to expand group child TabList 
+2021-11-29 18:50:49,822 [ 389434]   WARN - ctionSystem.impl.ActionUpdater - 1017 ms to expand group child Run 
+2021-11-29 18:50:51,197 [ 390809]   WARN - ctionSystem.impl.ActionUpdater - 1364 ms to expand group child Debug 
+2021-11-29 18:50:51,451 [ 391063]   WARN - ctionSystem.impl.ActionUpdater - 2646 ms to expand group child RunnerActions 
+2021-11-29 18:50:51,452 [ 391064]   WARN - ctionSystem.impl.ActionUpdater - 2651 ms to expand group child ToolbarRunGroup 

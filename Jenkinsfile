@@ -3,26 +3,17 @@ pipeline {
     environment{
         DOCKERHUB_CREDS = credentials("dockerhub")
     }
+    tools {
+        maven 'Maven 3.8.4'
+        jdk 'jdk9'
+    }
     stages {
-        stage('BUILD DOCKER IMAGE') {
+        stage('build') {
             steps {
-                sh 'docker build --no-cache=true -t thiccmoustache/apigateway:$BUILD_NUMBER .'
+                sh 'mvn install -DskipTests'
             }
         }
-        stage('LOGIN TO DOCKERHUB'){
-            steps {
-                sh 'docker login -u $DOCKERHUB_CREDS_USR -p $DOCKERHUB_CREDS_PSW'
-            }
-        }
-        stage('PUSH TO DOCKERHUB') {
-            steps {
-            sh 'docker push thiccmoustache/apigateway:$BUILD_NUMBER'
-            }
-        }
+        
     }
-    post{
-        always{
-            sh 'docker logout'
-        }
-    }
+
 }
