@@ -24,7 +24,14 @@ pipeline {
         stage('extract jar file'){
             steps {
                 sh "mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)"
+                sh 'pwd'
                 sh 'ls -la'
+            }
+        }
+
+        stage('build docker image'){
+            steps {
+                echo "building docker image"
             }
         }
 
