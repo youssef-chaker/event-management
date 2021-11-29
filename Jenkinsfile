@@ -5,7 +5,6 @@ pipeline {
     }
     tools {
         maven 'maven3.8.4'
-        jdk 'jdk11'
     }
     stages {
         stage('maven install') {
@@ -23,8 +22,8 @@ pipeline {
         }
 
         stage('extract jar file'){
-            steps {
-                sh 'jar -xf ./*.jar'
+            steps {
+                sh "jar -xf ./*.jar"
             }
         }
 
