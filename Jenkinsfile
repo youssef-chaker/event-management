@@ -23,8 +23,8 @@ pipeline {
 
         stage('extract jar file'){
             steps {
-                sh "jar -xf ./target/*.jar"
-                sh 'ls -a target/'
+                sh "mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)"
+                sh 'ls -la'
             }
         }
 
