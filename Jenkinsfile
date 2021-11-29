@@ -23,7 +23,7 @@ pipeline {
 
         stage('extract jar file'){
             steps {
-                sh "jar -xf ./*.jar"
+                sh "jar -xf ./target/*.jar"
             }
         }
 
