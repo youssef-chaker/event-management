@@ -36,11 +36,15 @@ pipeline {
         }
 
         stage('dockerhub login') {
-            sh 'docker login -u $DOCKERHUB_CREDS_USR -p $DOCKERHUB_CREDS_PSW'
+            steps {
+                sh 'docker login -u $DOCKERHUB_CREDS_USR -p $DOCKERHUB_CREDS_PSW'
+            }
         }
 
         stage('push to dockerhub'){
-            sh 'docker push thiccmoustache/namingserver:$BUILD_NUMBER'
+            steps {
+                sh 'docker push thiccmoustache/namingserver:$BUILD_NUMBER'
+            }
         }
 
         
