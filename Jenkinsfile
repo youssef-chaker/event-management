@@ -4,7 +4,7 @@ pipeline {
         DOCKERHUB_CREDS = credentials("dockerhub")
     }
     tools {
-        maven 'Maven 3.8.4'
+        maven 'maven 3.8.4'
         jdk 'jdk9'
     }
     stages {
