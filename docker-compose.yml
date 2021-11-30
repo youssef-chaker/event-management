@@ -6,7 +6,7 @@ services:
   #   ports:
   #     - "3307:3306"
   #   networks:
-  #     - pharmacie-network
+  #     - event-network
   #   environment:
   #     MYSQL_ROOT_PASSWORD: youssef
   #     MYSQL_DATABASE: pharmacies
@@ -17,35 +17,39 @@ services:
     ports:
       - "5432:5432"
     networks:
-      - pharmacie-network
+      - event-network
     environment:
       POSTGRES_USER: youssef
       POSTGRES_PASSWORD: youssef
       POSTGRES_DB: pharmacie
+  # user-microservice:
+  #   image : thiccmoustache/usermicroservice:1
+  #   ports: 
+  #     - ""
   naming-server:
-    image: pharmacie/naming-server:0.0.1-SNAPSHOT 
+    image: thiccmoustache/naming-server:0.0.1-SNAPSHOT 
     ports:
       - "8761:8761"
     networks:
-      - pharmacie-network
+      - event-network
   config-server:
     image: thiccmoustache/configserver:0.0.1-SNAPSHOT
     ports: 
       - "8888:8888"
     networks:
-      - pharmacie-network
+      - event-network
   zipkin:
     image: openzipkin/zipkin
     ports: 
       - "9411:9411"
     networks:
-      - pharmacie-network
+      - event-network
   keycloack:
     image: quay.io/keycloak/keycloak
     ports:
       - "8180:8080"
     networks:
-      - pharmacie-network
+      - event-network
     environment:
       KEYCLOAK_USER: youssef
       KEYCLOAK_PASSWORD : youssef
@@ -65,6 +69,6 @@ services:
       - ./jenkins/jenkins_home:/var/jenkins_home
       - /usr/bin/docker:/usr/bin/docker
     networks:
-      - pharmacie-network
+      - event-network
 networks:
-  pharmacie-network:
+  event-network:
