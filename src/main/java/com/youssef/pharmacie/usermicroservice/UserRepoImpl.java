@@ -47,7 +47,7 @@ public class UserRepoImpl implements UsersRepo{
         var map = new HashMap<String,Object>();
         map.put("grant_type","password");
         map.put("client_id","pharmacie-client");
-        map.put("client_secret","a520dc74-b8cb-4204-83e1-eaf7b5a5431d");
+        map.put("client_secret","c6936635-60f3-4e92-8a76-8868323c9aaf");
         map.put("username",username);
         map.put("password",password);
         return keycloackProxy.getUserTokenByUsernameAndPassword(map);
