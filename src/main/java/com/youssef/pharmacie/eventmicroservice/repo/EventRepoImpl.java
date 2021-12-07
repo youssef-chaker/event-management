@@ -1,5 +1,9 @@
-package com.youssef.pharmacie.eventmicroservice;
+package com.youssef.pharmacie.eventmicroservice.repo;
 
+import com.youssef.pharmacie.eventmicroservice.entity.Event;
+import com.youssef.pharmacie.eventmicroservice.entity.Tag;
+import com.youssef.pharmacie.eventmicroservice.entity.User;
+import com.youssef.pharmacie.eventmicroservice.repo.EventRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -8,7 +12,7 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
-public class EventRepoImpl implements EventRepo{
+public class EventRepoImpl implements EventRepo {
 
     private final EntityManager entityManager;
 
@@ -40,7 +44,7 @@ public class EventRepoImpl implements EventRepo{
         var query = entityManager.createNativeQuery("select id,title,description,st_astext(point) as point,ST_Distance( cast(ST_MakePoint("+longitude+","+latitude+") as geography) , cast(point as geography) ) as distance from events order by distance","dist");
         var resultset = (List<Event>)query.getResultList();
         resultset.forEach(e -> {
-            e.setTags(entityManager.createQuery("select t from tags t where t.event.id="+e.getId(),Tag.class).getResultList());
+            e.setTags(entityManager.createQuery("select t from tags t where t.event.id="+e.getId(), Tag.class).getResultList());
         });
         return resultset;
     }
@@ -53,7 +57,7 @@ public class EventRepoImpl implements EventRepo{
 
     @Override
     @Transactional
-    public void subscribe(User user,long id) {
+    public void subscribe(User user, long id) {
         var event = entityManager.find(Event.class,id);
         event.addAttendee(user);
     }

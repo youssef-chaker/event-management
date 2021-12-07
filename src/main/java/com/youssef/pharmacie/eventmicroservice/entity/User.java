@@ -1,6 +1,7 @@
-package com.youssef.pharmacie.eventmicroservice;
+package com.youssef.pharmacie.eventmicroservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.youssef.pharmacie.eventmicroservice.entity.Event;
 import lombok.Data;
 
 import javax.persistence.*;

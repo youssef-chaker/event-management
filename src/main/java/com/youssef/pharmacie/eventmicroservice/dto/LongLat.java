@@ -1,4 +1,4 @@
-package com.youssef.pharmacie.eventmicroservice;
+package com.youssef.pharmacie.eventmicroservice.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,9 +1,10 @@
-package com.youssef.pharmacie.eventmicroservice;
+package com.youssef.pharmacie.eventmicroservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.vividsolutions.jts.geom.Point;
 import com.vividsolutions.jts.io.ParseException;
 import com.vividsolutions.jts.io.WKTReader;
+import com.youssef.pharmacie.eventmicroservice.dto.LongLat;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

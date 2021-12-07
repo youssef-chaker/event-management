@@ -1,6 +1,6 @@
-package com.youssef.pharmacie.eventmicroservice;
+package com.youssef.pharmacie.eventmicroservice.Config;
 
-import org.springframework.http.HttpMethod;
+import com.youssef.pharmacie.eventmicroservice.util.KeyCloackRoleConverter;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

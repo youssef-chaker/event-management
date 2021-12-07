@@ -1,10 +1,15 @@
-package com.youssef.pharmacie.eventmicroservice;
+package com.youssef.pharmacie.eventmicroservice.controller;
 
 import com.vividsolutions.jts.geom.Geometry;
-import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.Point;
 import com.vividsolutions.jts.io.ParseException;
 import com.vividsolutions.jts.io.WKTReader;
+import com.youssef.pharmacie.eventmicroservice.repo.EventRepo;
+import com.youssef.pharmacie.eventmicroservice.proxy.UsersProxy;
+import com.youssef.pharmacie.eventmicroservice.dto.EventDto;
+import com.youssef.pharmacie.eventmicroservice.entity.Event;
+import com.youssef.pharmacie.eventmicroservice.entity.Tag;
+import com.youssef.pharmacie.eventmicroservice.entity.User;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,9 +17,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.function.EntityResponse;
 
-import javax.persistence.OrderBy;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
