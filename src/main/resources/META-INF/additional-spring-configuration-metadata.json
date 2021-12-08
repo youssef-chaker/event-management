@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "s3.bucket",
+      "type": "java.lang.String",
+      "description": "the name of the s3 bucket."
+  }
+] }
